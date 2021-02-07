@@ -1,9 +1,22 @@
 .page-header
+  margin-bottom: -170px
+  position: relative
+  z-index: 1
+
+  +mw(600)
+    margin-bottom: 0
+    background-color: #fff
+
   &__inner
     display: flex
+    flex-wrap: wrap
     align-items: center
     padding-top: 70px
     padding-bottom: 70px
+
+    +mw(600)
+      padding-top: 0
+      padding-bottom: 0
 
   &__logo-link
     display: block
@@ -18,20 +31,61 @@
   &__nav
     margin-left: 80px
 
+    +mw(600)
+      margin-left: 0
+
   &__contacts
     margin-left: auto
 
+  &__socials
+    margin-left: 30px
+    display: flex
+
+    +mw(600)
+      display: none
+
+  &__text
+    font-size: rem(12)
+    line-height: rem(12)
+    color: rgba(#46404C, 0.5)
+    font-weight: 500
+    display: none
+    margin-left: 20px
+
+    +mw(600)
+      display: block
+
+  &__menu
+    // display: none
+    width: 56px
+    height: 60px
+    background-repeat: no-repeat
+    background-position: center center
+    font-size: 0
+    transform: translateX(20px)
+
+    &--open
+      background-image: url("../img/dest/menu-open.svg")
+      background-size: 20px 14px
+      display: none
+
+      +mw(600)
+        display: block
 
 
-.page-header__inner
+    &--close
+      background-image: url("../img/dest/menu-close.svg")
+      background-size: 20px 20px
 
-.container
+  &__contacts
 
-.page-header
+    &--top
+    +mw(600)
+      transform: translateX(20px)
 
-.page-header
 
-.page-header__nav
+
+
 
 .header-nav
 
@@ -49,41 +103,166 @@
       margin-left: 60px
 
 
+      +mw(600)
+        margin-left: 0
+
+    &--cont
+      display: none
+
   &__link
     display: block
+    color: rgba($text, .5)
+
+  &__title
+      font-size: rem(22)
+      line-height: rem(28)
+      margin-top: 40px
+      margin-bottom: 40px
+      color: #46404C
+      font-weight: 600
+      padding-left: 30px
+      display: none
+
+  & a.contacts__tel
+    padding-left: 30px
+    margin-bottom: 30px
+    margin-top: 30px
+
+    &::after
+      content: none
+
+  &__socials
+
+    & a.socials__link
+      background-repeat: no-repeat
+      background-size: contain
+      width: 40px
+      height: 40px
+
+      & + a
+        margin-left: 16px
+
+      &::after
+        content: none
+
+      &--tg
+        background-image: url("../img/dest/tg.png")
+
+      &--viber
+        background-image: url("../img/dest/viber.png")
+
+      &--watsapp
+        background-image: url("../img/dest/whatsapp.png")
 
 
-.header-nav__list
+.mm-spn
 
-.header-nav
+  .header-nav
+    &__link
+      color: #575B64
+      font-weight: 600
+      font-size: rem(16)
+      line-height: rem(19)
+      padding-top: 20px
+      padding-bottom: 20px
+      padding-left: 30px
 
-.header-nav__link
+    &__item
+      border-bottom: 0.5px solid #E4E4E4
 
-.size-1
+      &--cont
+        display: block
 
-.page-header__
+        &:last-child
+          border-bottom: none
 
-  .contacts
+        &::before
+          content: none
 
-    &__tel
+      &::after
+        content: none
+
+    &__list.mm-spn--open
+      top: 0
+
+    &__title
       display: block
 
-.page-header__socials
+    &__socials
+      padding-left: 30px
+      padding-right: 30px
+      display: flex
+
+
+
+
+.contacts
+  display: flex
+  align-items: center
+
+
+  &__tel
+    display: block
+    color: $text
+    font-size: rem(24)
+    line-height: 1.2
+    font-weight: 600
+
+    &--top
+
+      +mw(600)
+        font-size: 0
+        width: 60px
+        height: 60px
+        background-image: url("../img/dest/phone.svg")
+        background-repeat: no-repeat
+        background-position: center center
+        border-left: 0.5px solid #DDDEE3;
+        border-right: 0.5px solid #DDDEE3;
 
 .socials
   margin-top: 0
   margin-bottom: 0
   padding-left: 0
+  // display: flex
 
   &__item
     list-style: none
 
-.socials__item
+    & + li
+      margin-left: 10px
 
-.socials__link
+  &__link
+    width: 30px
+    height: 30px
+    display: block
+    background-repeat: no-repeat
+    background-size: contain
+    background-position: center center
 
-.socials__link--tg
+    &--tg
+      background-image: url("../img/dest/tg.png")
 
-.socials__link--viber
+    &--viber
+      background-image: url("../img/dest/viber.png")
 
-.socials__link--watsapp
+    &--watsapp
+      background-image: url("../img/dest/whatsapp.png")
+
+.mm-ocd--open
+  background-color: transparent
+  pointer-events: none
+
+.mm-ocd__content
+  width: 100%
+  max-width: none
+  top: 60px
+  pointer-events: auto
+  // border-top: 0.5px solid #E4E4E4
+
+.mm-ocd__backdrop
+  width: 0
+  min-width: auto
+
+.mm-spn.mm-spn--light
+  background-color: #fff

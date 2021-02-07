@@ -4,7 +4,7 @@
   box-sizing: inherit
 
 *
-  outline: 1px solid red
+  // outline: 1px solid red
 
 html
   box-sizing: border-box
@@ -34,7 +34,29 @@ img
   font-size: rem(18)
   line-height: rem(24)
 
+.size-2
+  font-size: rem(20)
+  line-height: rem(24)
+
+.size-3
+  font-size: rem(24)
+  line-height: rem(28)
+
+  // .size-4
+  //   font-size: 18(rem)
+  //   line-height: 26(rem)
+
 .container
-  max-width: 1440px
+  max-width: 1240px
   margin-left: auto
   margin-right: auto
+
+  +mw(1270)
+    margin-left: 20px
+    margin-right: 20px
+
+.hover-opacity:hover
+  opacity: 0.5
+
+.page-body .hide
+  display: none

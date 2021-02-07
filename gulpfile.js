@@ -23,8 +23,11 @@ function browsersync() {
 function scripts() {
   return src([ // Берём файлы из источников
     'node_modules/jquery/dist/jquery.min.js', // Пример подключения библиотеки
+    'node_modules/mmenu-light/dist/mmenu-light.js', // Пример подключения библиотеки
+    'src/js/libs/*',
     'src/js/app.js', // Пользовательские скрипты, использующие библиотеку, должны быть подключены в конце
   ])
+    .pipe(sourcemaps.init())
     .pipe(concat('app.min.js')) // Конкатенируем в один файл
     .pipe(uglify()) // Сжимаем JavaScript
     // .pipe(sourcemaps.write()) //добавляем карту
@@ -35,7 +38,11 @@ function scripts() {
 function styles() {
   return src([
     'node_modules/normalize.css/normalize.css',
-    'src/sass/style.sass']) // Выбираем источник: "app/sass/main.sass" или "app/less/main.less"
+    'node_modules/mmenu-light/dist/mmenu-light.css',
+    'src/css/libs/*',
+    'src/sass/style.sass'
+
+  ]) // Выбираем источник: "app/sass/main.sass" или "app/less/main.less"
     .pipe(sourcemaps.init())
     .pipe(sass())
     .pipe(concat('app.min.css')) // Конкатенируем в файл app.min.js

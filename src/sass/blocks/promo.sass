@@ -1,0 +1,318 @@
+.promo
+  margin-bottom: 97px
+  position: relative
+
+  &__main
+    padding-top: 53%
+    position: relative
+    overflow: hidden
+    background-color: #deeeb0
+
+    +mw(1440)
+      padding-top: 0
+      height: 770px
+
+    +mw(600)
+      height: 677px
+
+  &__bg
+    position: absolute
+    width: 100%
+    // height: 100%
+    left: 50%
+    transform: translateX(-50%)
+    top: 0
+    min-width: 1440px
+
+    +mw(600)
+      left: 0
+      transform: none
+      min-width: auto
+
+  &__title
+    margin-bottom: 40px
+
+    +mw(600)
+      padding-top: 40px
+      margin-bottom: 178px
+
+  &__calculation-inner
+    display: flex
+    justify-content: flex-end
+
+    +mw(600)
+      margin-left: 0
+      margin-right: 0
+
+  &__calculation-wrapper
+    width: 100%
+    position: absolute
+    top: 170px
+    // bottom: -82px
+    z-index: 1
+
+    +mw(600)
+      position: static
+
+  &__calculation
+    width: 420px
+    background-color: #fff
+    border-radius: 10px
+    box-shadow: 0px 4px 30px rgba(70, 70, 70, 0.1)
+    border: 1px solid rgba(124, 133, 157, 0.1)
+    padding-right: 44px
+    padding-left: 44px
+    padding-top: 40px
+    padding-bottom: 21px
+
+    +mw(600)
+      width: 100%
+      padding-left: 20px
+      padding-right: 20px
+      padding-bottom: 30px
+      border-radius: 0
+      border: none
+
+  & .calculation
+
+    &__label
+      +vh()
+
+    &__control
+
+      & + .calculation__control
+        margin-top: 10px
+
+    &__field
+
+      &--head
+        margin-bottom: 30px
+
+        +mw(600)
+          margin-bottom: 20px
+
+      & + fieldset
+        margin-bottom: 20px
+
+    &__input
+      padding-left: 20px
+      padding-top: 22px
+      padding-bottom: 22px
+      display: block
+      background-color: #F0F0F4
+      border: 1px solid #E6E6EA
+      border-radius: 4px
+      width: 100%
+      font-size: rem(18)
+      line-height: rem(26)
+      color: #8D8D93
+      font-weight: 500
+
+      &:hover
+        background-color: #565657
+
+      &:focus,
+      &:active
+        outline: none
+        border: 1px solid #8CBD00
+        background-color: #fff
+
+    &__btn
+      margin-bottom: 10px
+
+    &__consent
+      font-size: rem(12)
+      line-height: rem(16)
+      color: #7C859D
+      text-align: center
+      margin-top: 0
+      margin-bottom: 0
+
+
+.promo-main
+
+  &__wrapper
+    position: absolute
+    left: 50%
+    transform: translateX(-50%)
+    top: 170px
+    width: 100%
+    z-index: 1
+
+    +mw(600)
+      top: 0
+
+
+
+
+
+
+.title
+  font-size: rem(44)
+  line-height: rem(48)
+  margin-top: 0
+  font-weight: 600
+
+  +mw(600)
+    font-size: rem(22)
+    line-height: rem(26)
+
+.promo__plus
+
+.plus
+  margin-top: 0
+  margin-bottom: 0
+  padding-left: 0
+  width: 320px
+
+  &__item
+    list-style: none
+    padding-left: 20px
+    padding-top: 16px
+    padding-bottom: 16px
+    padding-right: 39px
+    min-height: 80px
+    display: flex
+    align-items: center
+    border: 1px solid #DBEBB1
+    background-color: rgba(255, 255, 255, 0.4)
+    border-radius: 10px
+
+    & + li
+      margin-top: 5px
+
+  &__icon
+    margin: 0
+    background-image: url("../img/dest/confirm.png")
+    width: 40px
+    height: 40px
+
+  &__text
+    margin: 0
+    font-weight: 500
+    margin-left: 20px
+
+  &--promo
+
+    +mw(600)
+      width: 100%
+
+
+.calculation
+
+  &__title
+    font-weight: 600
+
+    +mw(600)
+      text-align: center
+      font-size: rem(20)
+      line-height: rem(24)
+
+  &__field
+    padding: 0
+    border: none
+
+  &__subtitle
+    font-size: rem(16)
+    line-height: rem(19)
+    font-weight: 500
+    color: #8D8D93
+    margin-bottom: 10px
+
+
+.btn
+  display: block
+  background-color: #8CBD00
+  box-shadow: 0px 10px 20px rgba(155, 208, 5, 0.5)
+  padding-top: 24px
+  padding-bottom: 25px
+  padding-left: 0
+  padding-right: 0
+  border: none
+  border-radius: 4px
+  width: 100%
+  font-size: rem(18)
+  line-height: rem(21)
+  color: #fff
+  text-align: center
+  cursor: pointer
+
+  &:hover
+    background-color: #A2CB30
+
+  &:focus
+    outline: none
+    background-color: #6C9B07
+
+  &:active
+    background-color: #6C9B07
+
+
+.heapBox
+  position: relative
+
+  &.open
+    // z-index: 1
+
+
+  & .holder
+    padding-left: 20px
+    padding-top: 22px
+    padding-bottom: 22px
+    display: block
+    background-color: #F0F0F4
+    border: 1px solid #E6E6EA
+    border-radius: 4px
+    font-size: rem(18)
+    line-height: rem(26)
+    color: #8D8D93
+    font-weight: 500
+    z-index: 10
+
+  & .handler
+    width: 6px
+    height: 12px
+    position: absolute
+    right: 20px
+    top: 30px
+    background-image: url("../img/dest/select-arrow.svg")
+    background-repeat: no-repeat
+    background-size: contain
+
+  & .heap
+    display: none
+    position: absolute
+    list-style-type: none
+    left: 0
+    width: 100%
+    top: 70px
+    overflow: hidden
+    z-index: 1
+
+
+.heapOptions
+  margin-top: 10px
+  margin-bottom: 0
+  padding-left: 0
+  background-color: #fff
+  border: 1px solid #e6e6ea
+  border-radius: 4px
+
+  & .heapOption
+    list-style: none
+
+    & a
+      font-size: rem(18)
+      line-height: rem(21)
+      font-weight: 600
+      color: #000
+      display: block
+      padding-top: 5px
+      padding-bottom: 5px
+      padding-left: 20px
+
+      &:hover
+        background-color: #f0f0f4
+
+  & .heapOption:first-child
+    display: none

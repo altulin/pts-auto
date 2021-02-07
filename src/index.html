@@ -8,49 +8,188 @@
   <link rel="stylesheet" href="css/app.min.css">
 </head>
 
-<body>
+<body class="page-body">
   <header class="page-header">
     <div class="page-header__inner container">
       <a class="page-header__logo-link" href="">
         <img class="page-header__logo-img" src="img/dest/logo.png" alt="finPTS" width="80" height="20">
       </a>
-      <nav class="page-header__nav header-nav">
+      <p class="page-header__text">деньги<br>под ПТС</p>
+      <nav class="page-header__nav header-nav" id="header-menu">
         <ul class="header-nav__list">
-          <li class="header-nav__item">
-            <a class="header-nav__link size-1" href="">процесс</a>
+          <li class="header-nav__item header-nav__item--cont">
+            <p class="header-nav__title">
+              Получите деньги под ПТС<br> в день обращения<br> в Иркутске
+            </p>
           </li>
           <li class="header-nav__item">
-            <a class="header-nav__link size-1" href="">отзывы</a>
+            <a class="header-nav__link  hover-opacity" href="">Процесс</a>
           </li>
           <li class="header-nav__item">
-            <a class="header-nav__link size-1" href="">вопросы</a>
+            <a class="header-nav__link  hover-opacity" href="">Отзывы</a>
           </li>
           <li class="header-nav__item">
-            <a class="header-nav__link size-1" href="">контакты</a>
+            <a class="header-nav__link  hover-opacity" href="">Вопросы</a>
+          </li>
+          <li class="header-nav__item">
+            <a class="header-nav__link  hover-opacity" href="">Контакты</a>
+          </li>
+          <li class="header-nav__item header-nav__item--cont">
+            <div class="header-nav__contacts">
+              <a class="contacts__tel hover-opacity" href="tel:+1234567890">8 (3952) 74-66-99</a>
+              <div class="header-nav__socials socials">
+                <a class="socials__link hover-opacity socials__link--tg" href="https://tttttt.me/rus_alex" aria-label="telegram" target="_blank"></a>
+                <a class="socials__link hover-opacity socials__link--viber" href="viber://add?number=89027600992" aria-label="viber" target="_blank"></a>
+                <a class="socials__link hover-opacity socials__link--watsapp" href="https://api.whatsapp.com/send?phone=79027600992" aria-label="watsapp" target="_blank"></a>
+              </div>
+            </div>
           </li>
         </ul>
       </nav>
-      <div class="page-header__contacts contacts">
-        <a class="contacts__tel" href="tel:+1234567890">8 (3952) 74-66-99</a>
+      <div class="page-header__contacts page-header__contacts--top contacts">
+        <a class="contacts__tel contacts__tel--top hover-opacity" href="tel:+1234567890">8 (3952) 74-66-99</a>
         <ul class="page-header__socials socials">
           <li class="socials__item">
-            <a class="socials__link socials__link--tg" href="https://tttttt.me/rus_alex" aria-label="telegram" target="_blank"></a>
+            <a class="socials__link hover-opacity socials__link--tg" href="https://tttttt.me/rus_alex" aria-label="telegram" target="_blank"></a>
           </li>
           <li class="socials__item">
-            <a class="socials__link socials__link--viber" href="viber://add?number=89027600992" aria-label="viber" target="_blank"></a>
+            <a class="socials__link hover-opacity socials__link--viber" href="viber://add?number=89027600992" aria-label="viber" target="_blank"></a>
           </li>
           <li class="socials__item">
-            <a class="socials__link socials__link--watsapp" href="https://api.whatsapp.com/send?phone=79027600992" aria-label="watsapp" target="_blank"></a>
+            <a class="socials__link hover-opacity socials__link--watsapp" href="https://api.whatsapp.com/send?phone=79027600992" aria-label="watsapp" target="_blank"></a>
           </li>
         </ul>
       </div>
+      <!-- <div class="page-header__btns"> -->
+      <a class="page-header__menu page-header__menu--open" href="#header-menu">Open the menu</a>
+      <a class="page-header__menu page-header__menu--close hide" href="#header-menu">Close the menu</a>
+      <!-- </div> -->
+
     </div>
   </header>
   <main class="page-main">
+    <section class="promo">
+      <div class="promo__main promo-main">
+        <div class="promo-main__wrapper">
+          <div class="promo-main__inner container">
+            <h1 class="promo__title title">Получите деньги под ПТС<br> в день обращения<br> в Иркутске</h1>
+            <ul class="promo__plus plus plus--promo">
+              <li class="plus__item">
+                <figure class="plus__icon"></figure>
+                <p class="plus__text">
+                  Выдаем до 90%<br>стоимости автомобиля
+                </p>
+              </li>
+              <li class="plus__item">
+                <figure class="plus__icon"></figure>
+                <p class="plus__text">
+                  Автомобиль<br>остается у вас
+                </p>
+              </li>
+              <li class="plus__item">
+                <figure class="plus__icon"></figure>
+                <p class="plus__text">
+                  С любой кредитной<br>историей
+                </p>
+              </li>
+              <li class="plus__item">
+                <figure class="plus__icon"></figure>
+                <p class="plus__text">
+                  Ставка от 2% в месяц
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <picture>
+          <source srcset="img/dest/promo-bg-600w.jpg" media="(max-width: 600px)" />
+          <img class="promo__bg" src="img/dest/promo-bg.jpg" alt="Получите деньги под ПТС" width="1440" height="770">
+        </picture>
+        <!-- <img class="promo__bg" src="img/dest/promo-bg.jpg" srcset="img/dest/promo-bg-600w.jpg 1200w"  alt="Получите деньги под ПТС" width="1440" height="770"> -->
+      </div>
+      <div class="promo__calculation-wrapper ">
+        <div class="promo__calculation-inner container">
+          <form class="promo__calculation calculation" action="#" method="get" name="calculation-car">
+            <fieldset class="calculation__field calculation__field--head">
+              <legend class="calculation__title size-3">Узнайте максимальную<br>сумму займа и рассчитайте<br>ежемесячный платеж</legend>
+            </fieldset>
+            <fieldset class="calculation__field">
+              <legend class="calculation__subtitle">Данные автомобиля:</legend>
 
-    <h1>Получите деньги под ПТС в день обращения в Иркутске
+              <div class="calculation__control">
+                <label class="calculation__label" for="calculation-brand">Марка вашего авто</label>
+                <select id="calculation-brand" class="calculation__select" placeholder="Марка вашего авто">
+                  <option value="1" class="calculation__head">Марка вашего авто</option>
+                  <option value="2">Toyota</option>
+                  <option value="3">Nissan</option>
+                  <option value="4">Mazda</option>
+                </select>
+              </div>
 
-    </h1>
+              <div class="calculation__control">
+                <label class="calculation__label" for="calculation-model">Модель вашего авто</label>
+                <select id="calculation-model" class="calculation__select" placeholder="Модель вашего авто">
+                  <option value="1">Модель вашего авто</option>
+                  <option value="2">Corolla</option>
+                  <option value="3">A6</option>
+                  <option value="4">Q5</option>
+                </select>
+              </div>
+
+              <div class="calculation__control">
+                <label class="calculation__label" for="calculation-year">Год выпуска авто</label>
+                <select id="calculation-year" class="calculation__select" placeholder="Год выпуска авто">
+                  <option value="1">Год выпуска авто</option>
+                  <option value="2">2000</option>
+                  <option value="3">2010</option>
+                  <option value="4">2015</option>
+                </select>
+              </div>
+
+            </fieldset>
+            <fieldset class="calculation__field">
+              <legend class="calculation__subtitle">Ваш номер телефона *</legend>
+              <div class="calculation__control">
+                <label class="calculation__label" for="calculation-phone">Ваш номер телефона</label>
+                <input class="calculation__input" type="text" id="calculation-phone">
+              </div>
+            </fieldset>
+
+            <button class="calculation__btn btn">Сделать расчет</button>
+            <p class="calculation__consent">нажимая на кнопку, вы подтвержаете согласие с&nbsp;политикой конфиденциальности</p>
+          </form>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="conditions">
+      <div class="conditions__inner">
+        <div class="conditions__client">
+          <h2 class="conditions__title title">Условия и требования
+            к клиенту, автомобилю</h2>
+
+          <div id="demoTab">
+            <ul class="resp-tabs-list">
+                <li >Условия</li>
+                <li >Клиент</li>
+                <li >Автомобиль</li>
+            </ul>
+
+            <div class="resp-tabs-container">
+                <div class="test"></div>
+                <div class="test"></div>
+                <div class="test"></div>
+            </div>
+          </div>
+        </div>
+        <div class="conditions__consult"></div>
+      </div>
+    </section>
+
+
+
+
   </main>
   <footer class="page-footer"></footer>
   <script src="js/app.min.js"></script>

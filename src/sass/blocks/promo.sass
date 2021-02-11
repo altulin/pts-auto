@@ -2,11 +2,15 @@
   margin-bottom: 97px
   position: relative
 
+  +mw(600)
+    margin-bottom: 0
+
   &__main
-    padding-top: 53%
+    // padding-top: 53%
     position: relative
     overflow: hidden
     background-color: #deeeb0
+    height: 770px
 
     +mw(1440)
       padding-top: 0
@@ -72,6 +76,7 @@
       padding-bottom: 30px
       border-radius: 0
       border: none
+      box-shadow: none
 
   & .calculation
 
@@ -95,18 +100,18 @@
         margin-bottom: 20px
 
     &__input
-      padding-left: 20px
-      padding-top: 22px
-      padding-bottom: 22px
-      display: block
-      background-color: #F0F0F4
-      border: 1px solid #E6E6EA
-      border-radius: 4px
-      width: 100%
-      font-size: rem(18)
-      line-height: rem(26)
-      color: #8D8D93
-      font-weight: 500
+      // padding-left: 20px
+      // padding-top: 22px
+      // padding-bottom: 22px
+      // display: block
+      // background-color: #F0F0F4
+      // border: 1px solid #E6E6EA
+      // border-radius: 4px
+      // width: 100%
+      // font-size: rem(18)
+      // line-height: rem(26)
+      // color: #8D8D93
+      // font-weight: 500
 
       &:hover
         background-color: #565657
@@ -120,13 +125,16 @@
     &__btn
       margin-bottom: 10px
 
-    &__consent
-      font-size: rem(12)
-      line-height: rem(16)
-      color: #7C859D
-      text-align: center
-      margin-top: 0
-      margin-bottom: 0
+      +mw(600)
+        margin-bottom: 20px
+
+    // &__consent
+    //   font-size: rem(12)
+    //   line-height: rem(16)
+    //   color: #7C859D
+    //   text-align: center
+    //   margin-top: 0
+    //   margin-bottom: 0
 
 
 .promo-main
@@ -152,6 +160,7 @@
   line-height: rem(48)
   margin-top: 0
   font-weight: 600
+  color: #46404C
 
   +mw(600)
     font-size: rem(22)
@@ -160,13 +169,13 @@
 .promo__plus
 
 .plus
-  margin-top: 0
-  margin-bottom: 0
-  padding-left: 0
+  // margin-top: 0
+  // margin-bottom: 0
+  // padding-left: 0
   width: 320px
 
   &__item
-    list-style: none
+    // list-style: none
     padding-left: 20px
     padding-top: 16px
     padding-bottom: 16px
@@ -218,6 +227,31 @@
     font-weight: 500
     color: #8D8D93
     margin-bottom: 10px
+
+  &__input
+    padding-left: 20px
+    padding-top: 21px
+    padding-bottom: 21px
+    display: block
+    background-color: #F0F0F4
+    border: 1px solid #E6E6EA
+    border-radius: 4px
+    width: 100%
+    font-size: rem(18)
+    line-height: rem(26)
+    color: #8D8D93
+    font-weight: 500
+
+  &__consent
+    font-size: rem(12)
+    line-height: rem(16)
+    color: #7C859D
+    text-align: center
+    margin-top: 0
+    margin-bottom: 0
+
+  &__politic
+    color: #7C859D
 
 
 .btn
@@ -292,14 +326,14 @@
 
 .heapOptions
   margin-top: 10px
-  margin-bottom: 0
+  // margin-bottom: 0
   padding-left: 0
   background-color: #fff
   border: 1px solid #e6e6ea
   border-radius: 4px
 
   & .heapOption
-    list-style: none
+    // list-style: none
 
     & a
       font-size: rem(18)

@@ -3,6 +3,14 @@ $("#calculation-brand").heapbox();
 $("#calculation-model").heapbox();
 $("#calculation-year").heapbox();
 
+$("#order-calculation-brand").heapbox();
+$("#order-calculation-model").heapbox();
+$("#order-calculation-year").heapbox();
+
+$("#example-calculation-brand").heapbox();
+$("#example-calculation-model").heapbox();
+$("#example-calculation-year").heapbox();
+
 
 //header-menu
 $(function() {
@@ -33,25 +41,22 @@ $(function() {
     drawer.close();
   })
 
-  console.log($(`demoTab`))
 
-  $('#demoTab').easyResponsiveTabs(
-    {
-      // tabidentify: 'vert',
-      type: `default`,
-      width: `auto`,
-      fit: true,
-      closed: 'accordion', // Start closed if in accordion view
-      tabidentify: 'hor_1', // The tab groups identifier
-      activate: function (event) { // Callback function if tab is switched
-          var $tab = $(this);
-          var $info = $('#nested-tabInfo');
-          var $name = $('span', $info);
+  // tabs
+  $('#tabs-box').responsiveTabs({
+    startCollapsed: 'tabs'
+  });
 
-          $name.text($tab.text());
+  // console.log($(window).width())
 
-          $info.show();
-      }
-    }
-  );
+  if ($(window).width() <= 768) {
+    $('#card-1').responsiveTabs({
+      startCollapsed: 'accordion'
+    });
+  }
+
+  
+
+  // console.log($(`#card-1`))
+  
 });

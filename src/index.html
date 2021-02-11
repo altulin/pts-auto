@@ -36,7 +36,7 @@
           </li>
           <li class="header-nav__item header-nav__item--cont">
             <div class="header-nav__contacts">
-              <a class="contacts__tel hover-opacity" href="tel:+1234567890">8 (3952) 74-66-99</a>
+              <a class="contacts__tel contacts-tel hover-opacity" href="tel:+1234567890">8 (3952) 74-66-99</a>
               <div class="header-nav__socials socials">
                 <a class="socials__link hover-opacity socials__link--tg" href="https://tttttt.me/rus_alex" aria-label="telegram" target="_blank"></a>
                 <a class="socials__link hover-opacity socials__link--viber" href="viber://add?number=89027600992" aria-label="viber" target="_blank"></a>
@@ -47,7 +47,7 @@
         </ul>
       </nav>
       <div class="page-header__contacts page-header__contacts--top contacts">
-        <a class="contacts__tel contacts__tel--top hover-opacity" href="tel:+1234567890">8 (3952) 74-66-99</a>
+        <a class="contacts-tel contacts__tel--top hover-opacity" href="tel:+1234567890">8 (3952) 74-66-99</a>
         <ul class="page-header__socials socials">
           <li class="socials__item">
             <a class="socials__link hover-opacity socials__link--tg" href="https://tttttt.me/rus_alex" aria-label="telegram" target="_blank"></a>
@@ -103,9 +103,10 @@
         </div>
         <picture>
           <source srcset="img/dest/promo-bg-600w.jpg" media="(max-width: 600px)" />
-          <img class="promo__bg" src="img/dest/promo-bg.jpg" alt="Получите деньги под ПТС" width="1440" height="770">
+          <!-- <img class="promo__bg" src="img/dest/promo-bg.jpg" alt="Получите деньги под ПТС" width="1440" height="770"> -->
+          <img class="promo__bg" src="img/dest/image-68.png" alt="Получите деньги под ПТС" width="1440" height="770">
         </picture>
-        <!-- <img class="promo__bg" src="img/dest/promo-bg.jpg" srcset="img/dest/promo-bg-600w.jpg 1200w"  alt="Получите деньги под ПТС" width="1440" height="770"> -->
+        
       </div>
       <div class="promo__calculation-wrapper ">
         <div class="promo__calculation-inner container">
@@ -156,7 +157,7 @@
             </fieldset>
 
             <button class="calculation__btn btn">Сделать расчет</button>
-            <p class="calculation__consent">нажимая на кнопку, вы подтвержаете согласие с&nbsp;политикой конфиденциальности</p>
+            <p class="calculation__consent">нажимая на кнопку, вы подтвержаете согласие с&nbsp;<a class="calculation__politic hover-opacity" href="#">политикой конфиденциальности</a></p>
           </form>
         </div>
       </div>
@@ -164,28 +165,578 @@
     </section>
 
     <section class="conditions">
-      <div class="conditions__inner">
-        <div class="conditions__client">
+      <div class="conditions__inner container box-bg box-border">
+        <div class="conditions__item conditions__item--client">
           <h2 class="conditions__title title">Условия и требования
-            к клиенту, автомобилю</h2>
+            к&nbsp;клиенту, автомобилю</h2>
 
-          <div id="demoTab">
-            <ul class="resp-tabs-list">
-                <li >Условия</li>
-                <li >Клиент</li>
-                <li >Автомобиль</li>
+          <div id="tabs-box" class="conditions__tabs tabs-box">
+            <ul class="tabs-box__list size-3">
+                <li class="tabs-box__item"><a class="tabs-box__link" href="#tab-1">Условия</a></li>
+                <li class="tabs-box__item"><a class="tabs-box__link" href="#tab-2">Клиент</a></li>
+                <li class="tabs-box__item"><a class="tabs-box__link" href="#tab-3">Автомобиль</a></li>
+                
             </ul>
 
-            <div class="resp-tabs-container">
-                <div class="test"></div>
-                <div class="test"></div>
-                <div class="test"></div>
-            </div>
+            <ul class="conditions__content tabs-content">
+              <li id="tab-1" class="tabs-content__item">
+                <ul class="tabs-content__sub-list size-1">
+                  <li class="tabs-content__sub-item">
+                    <span class="tabs-content__term">Сумма</span>
+                    <span class="tabs-content__def">от 10 000 руб. до 5 000 000 руб.</span>
+                  </li>
+                  <li class="tabs-content__sub-item">
+                    <span class="tabs-content__term">Срок</span>
+                    <span class="tabs-content__def">от 1 дня до 3 лет</span>
+                  </li>
+                  <li class="tabs-content__sub-item">
+                    <span class="tabs-content__term">Процентная ставка</span>
+                    <span class="tabs-content__def">от 2% в месяц</span>
+                  </li>
+                  <li class="tabs-content__sub-item">
+                    <span class="tabs-content__term">Оценка</span>
+                    <span class="tabs-content__def">до 90% стоимости авто</span>
+                  </li>
+                  <li class="tabs-content__sub-item">
+                    <span class="tabs-content__term">Время на оформление</span>
+                    <span class="tabs-content__def">30 минут</span>
+                  </li>
+                  <li class="tabs-content__sub-item">
+                    <span class="tabs-content__term">Досрочное погашение</span>
+                    <span class="tabs-content__def">без штрафов и комиссии</span>
+                  </li>
+                </ul>
+              </li>
+              <li id="tab-2" class="tabs-content__item">
+                <ul class="tabs-content__sub-list size-1">
+                  <li class="tabs-content__sub-item">
+                    <span class="tabs-content__term">Возраст</span>
+                    <span class="tabs-content__def">от 18 до 80 лет</span>
+                  </li>
+                  <li class="tabs-content__sub-item">
+                    <span class="tabs-content__term">Гражданство</span>
+                    <span class="tabs-content__def">гражданин РФ</span>
+                  </li>
+                  <li class="tabs-content__sub-item">
+                    <span class="tabs-content__term">Трудоустройство</span>
+                    <span class="tabs-content__def">не требуется</span>
+                  </li>
+                  <li class="tabs-content__sub-item">
+                    <span class="tabs-content__term">Справки</span>
+                    <span class="tabs-content__def">не нужны</span>
+                  </li>
+                  <li class="tabs-content__sub-item">
+                    <span class="tabs-content__term">Кредитная история</span>
+                    <span class="tabs-content__def">любая</span>
+                  </li>
+                  <li class="tabs-content__sub-item">
+                    <span class="tabs-content__term">Документы</span>
+                    <span class="tabs-content__def">ПТС, СТС, паспорт</span>
+                  </li>
+                </ul>
+              </li>
+              <li id="tab-3" class="tabs-content__item">
+                <ul class="tabs-content__sub-list size-1">
+                  <li class="tabs-content__sub-item">
+                    <span class="tabs-content__term">В собственности</span>
+                    <span class="tabs-content__def">да</span>
+                  </li>
+                  <li class="tabs-content__sub-item">
+                    <span class="tabs-content__term">Зарегистрирован в ГИБДД</span>
+                    <span class="tabs-content__def">да</span>
+                  </li>
+                  <li class="tabs-content__sub-item">
+                    <span class="tabs-content__term">Не в залоге</span>
+                    <span class="tabs-content__def">можем перевыкупить</span>
+                  </li>
+                  <li class="tabs-content__sub-item">
+                    <span class="tabs-content__term">Год выпуска</span>
+                    <span class="tabs-content__def"><span>иномарки: от 2000г.</span><span>отечественные: от 2010г.</span>
+                      </span>
+                  </li>
+                  <li class="tabs-content__sub-item">
+                    <span class="tabs-content__term">Время на оформление</span>
+                    <span class="tabs-content__def">30 минут</span>
+                  </li>
+                  <li class="tabs-content__sub-item">
+                    <span class="tabs-content__term">Досрочное погашение</span>
+                    <span class="tabs-content__def">без штрафов и комиссии</span>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+
           </div>
         </div>
-        <div class="conditions__consult"></div>
+        <div class="conditions__item conditions__item--consult consult">
+          <p class="consult__text size-1">
+            Если вы сомневаетесь в&nbsp;том, сможете ли&nbsp;вы&nbsp;получить деньги, 
+            то&nbsp;обязательно предварительно проконсультируйтесь с&nbsp;нашим специалистом.
+          </p>
+          <a class="consult__tel contacts-tel hover-opacity" href="tel:+1234567890">8 (3952) 74-66-99</a>
+          <a class="consult__link hover-opacity size-1" href="#">Получить консультацию</a>
+
+        </div>
       </div>
     </section>
+
+    <section class="contract">
+      <div class="contract__inner container">
+        <div class="contract__col contract__col--left">
+          <a class="contract__link btn" href="">Оставить заявку</a>
+        </div>
+        <div class="contract__col contract__col--right">
+          <h2 class="contract__title title">Договор <br> <mark class="color-green">без скрытых платежей</mark></h2> 
+          <p class="contract__text size-1">
+            В отличие от других компаний мы не взимаем никаких скрытых комиссий и платежей, кроме платежей по договору
+          </p>
+          <ul class="contract__list">
+            <li class="contract__item">
+              <p class="contract__term size-1">за оформление документов</p>
+              <p class="contract__def">с Finpts   <mark class="color-green">бесплатно</mark>, у других компаний <mark class="contract__price">от 2 000 руб.</mark> </p>
+            </li>
+            <li class="contract__item">
+              <p class="contract__term size-1">за регистрацию залога в Федеральной нотариальной палате</p>
+              <p class="contract__def">с Finpts   <mark class="color-green">бесплатно</mark>, у других компаний <mark class="contract__price">от 1 000 руб.</mark> </p>
+            </li>
+            <li class="contract__item">
+              <p class="contract__term size-1">за исключение из реестра залогов в Федеральной нотариальной палате</p>
+              <p class="contract__def">с Finpts   <mark class="color-green">бесплатно</mark>, у других компаний <mark class="contract__price">от 1 000 руб.</mark> </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="get container">
+      <h2 class="get__title title">
+        Получите деньги<br> <mark class="color-green">в 3 простых шага</mark>
+      </h2>
+      <ul class="get__list">
+        <li class="get__item">
+          <figure class="get__img get__img--app"></figure>
+          <div class="get__box">
+            <h3 class="get__sub-title size-3">Оставьте заявку или позвоните в наш офис</h3>
+            <p class="get__text size-1">Решение сразу после заполнения&nbsp;заявки</p>
+          </div>
+        </li>
+        <li class="get__item">
+          <figure class="get__img get__img--value"></figure>
+          <div class="get__box">
+            <h3 class="get__sub-title size-3">Проводим оценку авто и заключаем договор</h3>
+            <p class="get__text size-1">Специалист оценит ваш автомобиль и подготовит все документы</p>
+          </div>
+        </li>
+        <li class="get__item">
+          <figure class="get__img get__img--money"></figure>
+          <div class="get__box">
+            <h3 class="get__sub-title size-3">Получите деньги уже сегодня</h3>
+            <p class="get__text size-1">На карту или наличными прямо в&nbsp;нашем офисе</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section class="order">
+      <div class="order__inner container">
+        <div class="order__col order__col--left">
+          <h2 class="order__title title"><mark class="color-green">Оставьте заявку</mark> и узнайте максимальную сумму, рассчитайте ежемесячный платеж</h2>
+          <form class="order__calculation calculation" action="#" method="get" name="calculation-car">
+            
+            <fieldset class="calculation__field">
+              <legend class="calculation__subtitle">Данные автомобиля:</legend>
+
+              <div class="calculation__control">
+                <label class="calculation__label" for="order-calculation-brand">Марка вашего авто</label>
+                <select id="order-calculation-brand" class="calculation__select" placeholder="Марка вашего авто">
+                  <option value="1" class="calculation__head">Марка вашего авто</option>
+                  <option value="2">Toyota</option>
+                  <option value="3">Nissan</option>
+                  <option value="4">Mazda</option>
+                </select>
+              </div>
+
+              <div class="calculation__control">
+                <label class="calculation__label" for="order-calculation-model">Модель вашего авто</label>
+                <select id="order-calculation-model" class="calculation__select" placeholder="Модель вашего авто">
+                  <option value="1">Модель вашего авто</option>
+                  <option value="2">Corolla</option>
+                  <option value="3">A6</option>
+                  <option value="4">Q5</option>
+                </select>
+              </div>
+
+              <div class="calculation__control">
+                <label class="calculation__label" for="order-calculation-year">Год выпуска авто</label>
+                <select id="order-calculation-year" class="calculation__select" placeholder="Год выпуска авто">
+                  <option value="1">Год выпуска авто</option>
+                  <option value="2">2000</option>
+                  <option value="3">2010</option>
+                  <option value="4">2015</option>
+                </select>
+              </div>
+
+            </fieldset>
+            <fieldset class="calculation__field calculation__field--personal">
+              <div class="calculation__control">
+                <label class="calculation__label" for="order-calculation-phone">Ваш номер телефона *</label>
+                <input class="calculation__input" type="text" id="order-calculation-phone">
+              </div>
+              <div class="calculation__control">
+                <label class="calculation__label" for="order-calculation-name">Ваше имя</label>
+                <input class="calculation__input" type="text" id="order-calculation-name" placeholder="Ваше имя">
+              </div>
+            </fieldset>
+
+            <button class="calculation__btn btn">Сделать расчет</button>
+            <p class="calculation__consent">нажимая на кнопку, вы подтвержаете согласие с&nbsp;<a class="calculation__politic hover-opacity" href="#">политикой конфиденциальности</a></p>
+          </form>
+        </div>
+        <div class="order__col order__col--right plus-wrapper">
+          <ul class="order__plus plus plus--order">
+            <li class="plus__item">
+              <figure class="plus__icon"></figure>
+              <p class="plus__text">
+                Выдаем до 90%<br>стоимости автомобиля
+              </p>
+            </li>
+            <li class="plus__item">
+              <figure class="plus__icon"></figure>
+              <p class="plus__text">
+                Автомобиль<br>остается у вас
+              </p>
+            </li>
+            <li class="plus__item">
+              <figure class="plus__icon"></figure>
+              <p class="plus__text">
+                С любой кредитной<br>историей
+              </p>
+            </li>
+            <li class="plus__item">
+              <figure class="plus__icon"></figure>
+              <p class="plus__text">
+                Ставка от 2% в месяц
+              </p>
+            </li>
+          </ul>
+          <figure class="plus__img-wrap">
+            <img class="plus__img" src="/img/dest/plus-bg.png" alt="">
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="type">
+      <div class="type__inner container">
+        <h2 class="type__title title">Оформляем под <mark class="color-green">все типы транспортных средств</mark>
+          </h2>
+        <ul class="type__list">
+          <li class="type__item">
+            <figure class="type__img-wrap">
+              <picture>
+                <source srcset="img/dest/car-phone.png" media="(max-width: 600px)"/>
+                <img class="type__img" src="img/dest/car.png" alt="типы транспортных средств">
+              </picture>
+            </figure>
+            <div>
+              <h3 class="type__sub-title size-3">Легковые автомобили</h3>
+              <p class="type__text size-1">Любые виды гражданских автомобилей</p>
+            </div>
+          </li>
+
+          <li class="type__item">
+            <figure class="type__img-wrap">
+              <picture>
+                <source srcset="img/dest/big-car-phone.png" media="(max-width: 600px)"/>
+                <img class="type__img" src="img/dest/big-car.png" alt="типы транспортных средств">
+              </picture>
+            </figure>
+            <div>
+              <h3 class="type__sub-title size-3">Грузовые автомобили</h3>
+              <p class="type__text size-1">Газели, тягачи, фуры</p>
+            </div>
+          </li>
+
+          <li class="type__item">
+            <figure class="type__img-wrap">
+              <picture>
+                <source srcset="img/dest/track-phone.png" media="(max-width: 600px)"/>
+                <img class="type__img" src="img/dest/track.png" alt="типы транспортных средств">
+              </picture>
+            </figure>
+            <div>
+              <h3 class="type__sub-title size-3">Спецтехника</h3>
+               <p class="type__text size-1">Трактора, бульдозеры, погрузчики, краны</p>
+            </div>
+          </li>
+
+          <li class="type__item">
+            <figure class="type__img-wrap">
+              <picture>
+                <source srcset="img/dest/baik-phone.png" media="(max-width: 600px)"/>
+                <img class="type__img" src="img/dest/baik.png" alt="типы транспортных средств">
+              </picture>
+            </figure>
+            <div>
+              <h3 class="type__sub-title size-3">Мототехника</h3>
+              <p class="type__text size-1">Мотоциклы, квадроциклы, скутеры</p>
+            </div>
+          </li>
+
+          <li class="type__item">
+            <figure class="type__img-wrap">
+              <picture>
+                <source srcset="img/dest/boat-phone.png" media="(max-width: 600px)"/>
+                <img class="type__img" src="img/dest/boat.png" alt="типы транспортных средств">
+              </picture>
+            </figure>
+            <div>
+              <h3 class="type__sub-title size-3">Водный транспорт</h3>
+              <p class="type__text size-1">Яхты, катера, гидроциклы</p>
+            </div>
+          </li>
+
+          <li class="type__item">
+            <figure class="type__img-wrap">
+              <picture>
+                <source srcset="img/dest/bus-phone.png" media="(max-width: 600px)"/>
+                <img class="type__img" src="img/dest/bus.png" alt="типы транспортных средств">
+              </picture>
+            </figure>
+            <div>
+              <h3 class="type__sub-title size-3">Автобусы</h3>
+              <p class="type__text size-1">Туристические, маршрутные, специальные</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="help">
+      <h2 class="help__title">Оказываем помощь при покупке автомобиля</h2>
+      <div class="help__inner container">
+        <div class="help__row visit">
+          <div class="visit__box">
+            <h3 class="visit__title title"><mark class="color-green">Выезжаем к клиенту</mark><br>
+              для осмотра автомобиля<br>
+              и заключения договора</h3>
+            <p class="visit__text size-1">Если у вас нет возможности приехать в&nbsp;наш&nbsp;офис. </p>
+            <a class="visit__link btn" href="#" target="_blank">Вызвать специалиста</a>
+          </div>
+          <figure class="visit__img-wrap">
+            <picture>
+              <source srcset="img/dest/visit-phone.png" media="(max-width: 600px)"/>
+              <img class="visit__img" src="img/dest/visit.png" alt="выезд к клиенту" width="1108" height="434">
+            </picture>
+          </figure>
+        </div>
+
+        <div class="help__row finance">
+          <div class="finance__box">
+            <h3 class="finance__title title">Оказываем финансовую помощь при покупке автомобиля</h3>
+            <p class="finance__text size-1">Оказываем финансовую помощь при покупке, нужного Вам,<br> автомобиля или спецтехники посредством договора лизинга.</p>
+            <p class="finance__text size-1">Сумма, проценты и срок договора рассчитываются исходя из Ваших финансовых возможностей. </p>
+            <p class="finance__text size-1">Главное отличие от других лизинговых компаний – помогаем приобрести <nobr>б/у</nobr>&nbsp;автомобили или спецтехнику.</p>
+          </div>
+          <figure class="finance__img-wrap">
+            <picture>
+              <source srcset="img/dest/finance-phone.png" media="(max-width: 600px)"/>
+              <img class="finance__img" src="img/dest/finance.png" alt="выезд к клиенту" width="750" height="426">
+            </picture>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="example">
+      <div class="example__inner container">
+        <div class="example__col example__col--calc calc">
+          <h3 class="calc__title title">Суммы выданные нашим клиентам в этом месяце</h2>
+          <p class="calc__text size-3">Получите деньги в день обращения по лучшим условиям</p>
+          <form class="calc__calculation calculation" action="#" method="get" name="calculation-car">
+            <!-- <fieldset class="calculation__field calculation__field--head">
+              <legend class="calculation__title size-3">Узнайте максимальную<br>сумму займа и рассчитайте<br>ежемесячный платеж</legend>
+            </fieldset> -->
+            <fieldset class="calculation__field">
+              <legend class="calculation__subtitle">Данные автомобиля:</legend>
+
+              <div class="calculation__control">
+                <label class="calculation__label" for="example-calculation-brand">Марка вашего авто</label>
+                <select id="example-calculation-brand" class="calculation__select" placeholder="Марка вашего авто">
+                  <option value="1" class="calculation__head">Марка вашего авто</option>
+                  <option value="2">Toyota</option>
+                  <option value="3">Nissan</option>
+                  <option value="4">Mazda</option>
+                </select>
+              </div>
+
+              <div class="calculation__control">
+                <label class="calculation__label" for="example-calculation-model">Модель вашего авто</label>
+                <select id="example-calculation-model" class="calculation__select" placeholder="Модель вашего авто">
+                  <option value="1">Модель вашего авто</option>
+                  <option value="2">Corolla</option>
+                  <option value="3">A6</option>
+                  <option value="4">Q5</option>
+                </select>
+              </div>
+
+              <div class="calculation__control">
+                <label class="calculation__label" for="example-calculation-year">Год выпуска авто</label>
+                <select id="example-calculation-year" class="calculation__select" placeholder="Год выпуска авто">
+                  <option value="1">Год выпуска авто</option>
+                  <option value="2">2000</option>
+                  <option value="3">2010</option>
+                  <option value="4">2015</option>
+                </select>
+              </div>
+
+            </fieldset>
+            <fieldset class="calculation__field">
+              <legend class="calculation__subtitle">Ваш номер телефона *</legend>
+              <div class="calculation__control">
+                <label class="calculation__label" for="example-calculation-phone">Ваш номер телефона</label>
+                <input class="calculation__input" type="text" id="example-calculation-phone">
+              </div>
+            </fieldset>
+
+            <button class="calculation__btn btn">Сделать расчет</button>
+            <p class="calculation__consent">нажимая на кнопку, вы подтвержаете согласие с&nbsp;<a class="calculation__politic hover-opacity" href="#">политикой конфиденциальности</a></p>
+          </form>
+        </div>
+        <div class="example__col example__col--review review">
+          <h3 class="review__title title">Займы выданные нашим клиентам в этом месяце</h3>
+          <div class="review__card card">
+            <div class="card__col card__col--left">
+              <figure class="card__img-wrap">
+                <img class="card__img" src="img/dest/auto.png" alt="автомобиль">
+              </figure>
+              <ul class="card__list">
+                <li class="card__item">
+                  <span class="card__term">Авто :</span> <span class="card__def">Hyunadai Solaris</span>
+                </li>
+                <li class="card__item">
+                  <span class="card__term">Год :</span> <span class="card__def">2012 г.в.</span>
+                </li>
+                <li class="card__item">
+                  <span class="card__term">Сумма :</span> <span class="card__def">170 000 ₽</span>
+                </li>
+                <li class="card__item">
+                  <span class="card__term">Ставка :</span> <span class="card__def">6%</span>
+                </li>
+              </ul>
+            </div>
+            <div class="card__col card__col--right" id="card-1">
+              <ul class="card__link-wrap">
+                <li><a class="card__link" href="#card__link-1">прочитать отзыв</a></li>
+              </ul>
+              <div class="card__text-wrap" id="card__link-1">
+                <div class="card__item">
+                  <span class="card__term">Отзыв :</span><span class="card__def">Руслан</span>
+                </div>
+                
+                <p class="card__text size-1">
+                  Работаем с данной компанией уже полгода, условия нормальные. Сотрудничество взаимовыгодное. Один раз вовремя не смогли оплатить, были в районе без связи, но ребята пошли навстречу и не стали начислять штрафы, учитывая возникшую ситуацию.
+                </p>
+              </div> 
+            </div>
+          </div>
+          <div class="review__card card">
+            <div class="card__col card__col--left">
+              <figure class="card__img-wrap">
+                <img class="card__img" src="img/dest/auto.png" alt="автомобиль">
+              </figure>
+              <ul class="card__list">
+                <li class="card__item">
+                  <span class="card__term">Авто :</span> <span class="card__def">Hyunadai Solaris</span>
+                </li>
+                <li class="card__item">
+                  <span class="card__term">Год :</span> <span class="card__def">2012 г.в.</span>
+                </li>
+                <li class="card__item">
+                  <span class="card__term">Сумма :</span> <span class="card__def">170 000 ₽</span>
+                </li>
+                <li class="card__item">
+                  <span class="card__term">Ставка :</span> <span class="card__def">6%</span>
+                </li>
+              </ul>
+            </div>
+            <div class="card__col card__col--right" id="card-1">
+              <ul class="card__link-wrap">
+                <li><a class="card__link" href="#card__link-1">прочитать отзыв</a></li>
+              </ul>
+              <div class="card__text-wrap" id="card__link-1">
+                <div class="card__item">
+                  <span class="card__term">Отзыв :</span><span class="card__def">Руслан</span>
+                </div>
+                
+                <p class="card__text size-1">
+                  Работаем с данной компанией уже полгода, условия нормальные. Сотрудничество взаимовыгодное. Один раз вовремя не смогли оплатить, были в районе без связи, но ребята пошли навстречу и не стали начислять штрафы, учитывая возникшую ситуацию.
+                </p>
+              </div> 
+            </div>
+          </div>
+          <div class="review__card card">
+            <div class="card__col card__col--left">
+              <figure class="card__img-wrap">
+                <img class="card__img" src="img/dest/auto.png" alt="автомобиль">
+              </figure>
+              <ul class="card__list">
+                <li class="card__item">
+                  <span class="card__term">Авто :</span> <span class="card__def">Hyunadai Solaris</span>
+                </li>
+                <li class="card__item">
+                  <span class="card__term">Год :</span> <span class="card__def">2012 г.в.</span>
+                </li>
+                <li class="card__item">
+                  <span class="card__term">Сумма :</span> <span class="card__def">170 000 ₽</span>
+                </li>
+                <li class="card__item">
+                  <span class="card__term">Ставка :</span> <span class="card__def">6%</span>
+                </li>
+              </ul>
+            </div>
+            <div class="card__col card__col--right" id="card-1">
+              <ul class="card__link-wrap">
+                <li><a class="card__link" href="#card__link-1">прочитать отзыв</a></li>
+              </ul>
+              <div class="card__text-wrap" id="card__link-1">
+                <div class="card__item">
+                  <span class="card__term">Отзыв :</span><span class="card__def">Руслан</span>
+                </div>
+                
+                <p class="card__text size-1">
+                  Работаем с данной компанией уже полгода, условия нормальные. Сотрудничество взаимовыгодное. Один раз вовремя не смогли оплатить, были в районе без связи, но ребята пошли навстречу и не стали начислять штрафы, учитывая возникшую ситуацию.
+                </p>
+              </div> 
+            </div>
+          </div>
+
+          <a class="review__link size-1" href="#">Посмотреть еще отзывы </a>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="faq">
+      <div class="faq__inner">
+        <div class="faq__col faq__col--info">
+          <h2 class="faq__title title">
+            Частые вопросы, которые задают нам клиенты
+          </h2>
+          <p class="faq__text">Задайте нам вопрос онлайн, в любом удобном для вас мессенжере </p>
+        </div>
+        <div class="faq__col faq__col--accord accord" id="faq">
+          <ul class="accord__list">
+            <li class="accord__item"><a href="#faq-1">Можно ли оформить договор на автомобиль, если куплен по договору купли-продажи, но не переоформили в ГИБДД?</a></li>
+            <li class="accord__item"><a href="#faq-2">Можно оформить, если автомобилем владею по нотариальной доверенности?</a></li>
+          </ul>
+          <div class="faq__answer" id="faq-1">Нет. Только после перерегистрации в ГИБДД.</div>
+          <div class="faq__answer" id="faq-2">Нет. Договора заключаются только с собственником автомобиля.</div>
+
+        </div>
+      </div>
+    </section>
+
 
 
 

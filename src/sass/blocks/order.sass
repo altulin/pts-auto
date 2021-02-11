@@ -1,0 +1,142 @@
+.order
+  margin-bottom: 100px
+
+  +mw(600)
+    margin-bottom: 80px
+
+  &__inner
+    display: flex
+    justify-content: space-between
+
+ 
+
+
+  &__col--left
+    width: 60%
+
+    +mw(1000)
+      width: 100%
+
+
+  &__title
+    margin-bottom: 40px
+
+    +mw(600)
+      text-align: center
+      margin-bottom: 30px
+
+
+  &__calculation
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+
+    +mw(600)
+      flex-direction: column
+
+    & .calculation
+
+      &__field
+        width: calc(50% - 25px)
+
+        +mw(1000)
+          width: calc(50% - 10px)
+
+        +mw(600)
+          width: 100%
+
+          & + fieldset
+            margin-top: 20px
+
+          &--personal 
+
+            & .calculation__label
+              display: block
+              font-weight: 500
+
+            & .calculation__control + div
+              margin-top: 20px
+
+          
+
+
+      &__btn
+        margin-top: 60px
+        margin-bottom: 20px
+
+        +mw(600)
+          margin-top: 20px
+
+      &__control
+
+        & + div
+          margin-top: 20px
+
+          +mw(600)
+            margin-top: 10px
+
+      &__label
+        margin-bottom: 10px
+        display: inline-block
+        color: #8D8D93
+
+        +mw(600)
+          display: none
+
+      &__input::placeholder
+        color: #8D8D93
+
+      &__consent
+        margin-left: auto
+        margin-right: auto
+
+      &__subtitle
+        display: none
+
+        +mw(600)
+          display: block
+
+  &__col--right
+    flex-grow: 1
+    display: flex
+
+    +mw(1000)
+      display: none
+
+  
+
+
+
+
+
+
+
+  
+
+.plus
+  z-index: 1
+
+  &-wrapper
+    max-width: 380px
+    flex-direction: column
+    align-items: center
+    padding-top: 30px
+    padding-left: 30px
+    padding-right: 30px
+    background-color: #ECF7D0
+    border-radius: 20px
+    position: relative
+    overflow: hidden
+
+  &__img-wrap
+    position: absolute
+    width: 100%
+    bottom: 0
+    left: 0
+
+  &__img
+    display: block
+
+
+  
+

@@ -1,0 +1,155 @@
+.help
+  margin-bottom: 100px
+
+  &__title
+    +vh()
+
+  &__inner
+
+    +mw(600)
+      margin-left: 0
+      margin-right: 0
+
+
+  &__row
+    background-color: #F6F6F6
+    border-radius: 20px
+    overflow: hidden
+
+    +mw(600)
+      border-radius: 0
+
+    & + div
+      margin-top: 40px
+
+      +mw(600)
+        margin-top: 7px
+
+
+.visit
+  min-height: 744px
+  position: relative
+  display: flex
+  flex-direction: column
+  justify-content: flex-end
+  align-items: center
+
+  +mw(600)
+    min-height: auto
+    padding-top: 70px
+
+  &__box
+    position: absolute
+    left: 50%
+    transform: translateX(-50%)
+    top: 105px
+    display: flex
+    flex-direction: column
+    align-items: center
+
+    +mw(600)
+      position: static
+      transform: none
+      width: 100%
+      padding-left: 20px
+      padding-right: 20px
+
+
+  &__title
+    margin-bottom: 40px
+    text-align: center
+
+    +mw(600)
+      margin-bottom: 30px
+
+
+  &__text
+    margin-bottom: 40px
+    text-align: center
+
+    +mw(600)
+      margin-bottom: 30px
+      font-size: rem(16)
+
+
+  &__link
+    width: auto
+    padding-left: 80px
+    padding-right: 80px
+    display: inline-block
+
+    +mw(600)
+      width: 100%
+      padding-left: 0
+      padding-right: 0
+
+
+  &__img-wrap
+    max-width: 1108px
+
+
+  &__img
+    display: block
+
+
+.finance
+  min-height: 500px
+  display: flex
+  position: relative
+
+  +mw(600)
+    min-height: auto
+    flex-direction: column
+
+  &__box
+    padding-left: 80px
+    padding-bottom: 80px
+    padding-top: 80px
+    width: 62%
+
+    +mw(600)
+      padding-top: 70px
+      width: auto
+      padding-left: 20px
+      padding-right: 20px
+      padding-bottom: 0
+      margin-bottom: 10px
+
+
+  &__title
+    margin-bottom: 40px
+
+    +mw(600)
+      margin-bottom: 20px
+
+
+  &__text
+
+    width: 75%
+
+    +mw(600)
+      font-size: rem(16)
+      width: 100%
+
+    & + p
+      margin-top: 24px 
+
+      +mw(600)
+        margin-top: 20px
+
+
+  &__img-wrap
+    position: absolute
+    right: 0
+    bottom: 0
+    width: 45%
+
+    +mw(600)
+      position: static
+      width: 100%
+
+
+  &__img
+    display: block
+
+

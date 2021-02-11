@@ -9,6 +9,10 @@
 html
   box-sizing: border-box
   font-size: 16px
+  // font-size: calc(16px/100 + 4.95vw)
+
+  +mw(600)
+    // font-size: calc(16px/100 + 2.62vw)
 
 body
   color: $text
@@ -17,6 +21,22 @@ body
   +font(Gilroy)
 
   // @include font("Roboto")
+
+ul
+  margin-top: 0
+  margin-bottom: 0
+  padding-left: 0
+
+li
+  list-style: none
+
+h1,
+h2,
+h3,
+p,
+figure,
+fieldset
+  margin: 0
 
 a
   text-decoration: none
@@ -60,3 +80,15 @@ img
 
 .page-body .hide
   display: none
+
+.box
+
+  &-bg
+    background-color: #FAF9FA
+
+  &-border
+    border-radius: 20px
+
+.color-green
+  color: #8cbd00
+  background-color: transparent

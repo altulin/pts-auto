@@ -1,4 +1,234 @@
-.test
-  width: 300px
-  height: 200px
-  background-color: tomato
+.conditions
+  padding-top: 37px
+  margin-bottom: 170px
+
+  +mw(600)
+    padding-top: 61px
+    background-color: #faf9fa
+    margin-bottom: 20px
+
+  &__inner
+    padding-top: 80px
+    display: flex
+    justify-content: space-around
+    height: 669px
+    background-image: url(../img/dest/man.png)
+    background-repeat: no-repeat
+    background-position: 100% 100%
+    background-size: 46% auto
+
+    +mw(1000)
+      flex-direction: column
+      height: auto
+      padding-left: 30px
+      padding-right: 30px
+      padding-top: 61px
+      padding-bottom: 30px
+      
+      // background-image: url(../img/dest/man-mob.png)
+      background-image: none
+      background-size: auto
+
+    +mw(600)
+      padding-top: 0
+      padding-left: 20px
+      padding-right: 20px
+      margin-right: 0
+      margin-left: 0
+      background-image: url(../img/dest/man-mob.png)
+      background-size: contain
+      padding-bottom: 245px
+
+  &__item
+
+    &--client
+      max-width: 600px 
+      position: relative
+
+      +mw(1000)
+        max-width: none
+        margin-bottom: 30px
+    
+    &--consult
+      width: 280px
+      padding-top: 50px
+      padding-right: 50px
+      box-sizing: content-box
+
+      +mw(1000)
+        padding-right: 0
+        padding-top: 0
+        width: 100%
+
+      +mw(600)
+        box-sizing: border-box
+
+  &__title
+
+    +mw(1000)
+      margin-bottom: 30px
+
+    +mw(600)
+      text-align: center
+
+  &__tabs
+    position: absolute
+    left: 0
+    top: 162px
+
+    +mw(1000)
+      position: static
+
+.tabs-box 
+  
+  &__list
+    display: flex
+
+  &__link
+    width: 200px
+    display: block
+    color: #8D8D93
+    padding-top: 21px
+    padding-bottom: 21px
+    text-align: center
+    border-radius: 4px 4px 0px 0px
+    border-top: 1px solid transparent
+    border-left: 1px solid transparent
+    border-right: 1px solid transparent
+    font-weight: 600
+        
+
+.r-tabs-state-active .tabs-box__link
+  background-color: #fff
+  box-shadow: 0px -10px 30px rgba(70, 70, 70, 0.1)
+  border-color:  rgba(124, 133, 157, 0.1)
+  color: #8CBD00
+
+.r-tabs-accordion-title 
+  margin-bottom: 10px
+
+  & .r-tabs-anchor
+    font-size: rem(16)
+    line-height: rem(19)
+    font-weight: 600
+    color: $text
+    border: 1px solid #E6E6EA
+    border-radius: 5px
+    padding-top: 20px
+    padding-bottom: 20px
+    padding-left: 20px
+    display: block
+    background-color: #fff
+    position: relative
+
+    &::after
+      content: ""
+      background-image: url(../img/dest/arrow.png)
+      background-repeat: no-repeat
+      width: 30px
+      height: 30px
+      position: absolute
+      right: 20px
+      top: 15px
+  
+  &.r-tabs-state-active
+    margin-bottom: 0
+
+    & .r-tabs-anchor
+      border-radius: 5px 5px 0 0
+      border-bottom: none
+      color: #8CBD00
+
+      &::after
+        transform: rotate(90deg)
+
+
+.tabs-content
+  background-color: #fff
+  border: 1px solid rgba(124, 133, 157, 0.1)
+  box-shadow: 0px 4px 30px rgba(70, 70, 70, 0.1)
+
+  +mw(768)
+    background-color: transparent
+    box-shadow: none
+    border: none
+
+  & .tabs-content
+    
+    &__item
+      padding: 0
+
+      +mw(768)
+        background-color: #fff
+        margin-bottom: 10px
+        border-radius: 0 0 5px 5px
+        border: 1px solid #E6E6EA
+
+    &__sub-list
+      
+      +mw(768)
+        padding-left: 20px
+        padding-right: 20px
+
+  &__sub-item
+    padding: 23px 40px
+    display: flex
+    justify-content: space-between
+
+    & + li
+      border-top: 1px solid #E6E6EA
+
+    +mw(768)
+      padding-left: 0
+      padding-right: 0
+      padding-top: 16px
+      padding-bottom: 16px
+      flex-direction: column
+      align-items: flex-start
+  
+  &__term
+    font-weight: 600
+    display: flex
+    align-items: center
+
+    +mw(768) 
+      font-size: rem(14)
+      line-height: rem(17)
+      margin-bottom: 5px
+
+
+  &__def
+    display: flex
+    align-items: center
+    justify-content: flex-end
+
+    +mw(768)
+      font-size: rem(14)
+      line-height: rem(16)
+
+.consult
+
+  &__link
+    display: inline-block
+    color: #8D8D93
+    padding-left: 30px
+    padding-right: 30px
+    padding-top: 22px
+    padding-bottom: 22px
+    border: 1px solid #8D8D93
+    border-radius: 4px
+    font-weight: 600
+    text-align: center
+
+    +mw(600)
+      width: 100%
+
+  &__text
+    font-weight: 500
+    margin-bottom: 20px
+
+  &__tel
+    margin-bottom: 20px
+
+    +mw(600)
+      font-size: rem(20)

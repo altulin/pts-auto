@@ -4,14 +4,15 @@
   box-sizing: inherit
 
 *
-  // outline: 1px solid red
+  outline: 1px solid red
 
 html
   box-sizing: border-box
   font-size: 16px
   // font-size: calc(16px/100 + 4.95vw)
 
-  +mw(600)
+  +mw(1200)
+    font-size: calc(16px + 6 * ((100vw - 320px) / 680))
     // font-size: calc(16px/100 + 2.62vw)
 
 body

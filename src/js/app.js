@@ -36,7 +36,6 @@ $(function() {
   $('body').on('click', '.page-header__menu--close', (e) => {
     $(`.page-header__menu--close`).addClass(`hide`);
     $(`.page-header__menu--open`).removeClass(`hide`);
-    console.log(`kffkfkfkfkk`)
     e.preventDefault();
     drawer.close();
   })
@@ -47,16 +46,57 @@ $(function() {
     startCollapsed: 'tabs'
   });
 
-  // console.log($(window).width())
+  // tabs example section
 
   if ($(window).width() <= 768) {
     $('#card-1').responsiveTabs({
-      startCollapsed: 'accordion'
+      startCollapsed: 'accordion',
+      animation: 'slide',
+      click: function(event, tab){
+        // console.log(event)
+        // console.log(tab)
+        // console.log($(this).find(`.r-tabs-accordion-title .r-tabs-anchor`).text())
+        // .replace("прочитать отзыв", "свернуть")
+      }
+    });
+    $('#card-2').responsiveTabs({
+      startCollapsed: 'accordion',
+      animation: 'slide'
+    });
+    $('#card-3').responsiveTabs({
+      startCollapsed: 'accordion',
+      animation: 'slide'
     });
   }
+
+  $('#faq').responsiveTabs({
+    // collapsible: 'accordion',breakpoint
+    // startCollapsed: 'accordion',
+    animation: 'slide'
+  });
 
   
 
   // console.log($(`#card-1`))
   
+});
+
+
+// map
+let map;
+
+DG.then(function () {
+    map = DG.map('map', {
+        center: [52.26745, 104.33916],
+        zoom: 15,
+        scrollWheelZoom: false
+    });
+    myIcon = DG.icon({
+                iconUrl: 'img/dest/marker.png',
+                iconSize: [48, 60]
+            });
+    DG.marker([52.2677, 104.33916], {
+      draggable: true,
+      icon: myIcon
+    }).addTo(map);
 });

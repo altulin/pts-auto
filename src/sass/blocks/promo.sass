@@ -1,61 +1,93 @@
 .promo
   margin-bottom: 97px
-  position: relative
+  padding-top: 170px
+  background-color: #E4F4B7
+
+  +mw(1000)
+    background-color: #fff
 
   +mw(600)
     margin-bottom: 0
+    padding-top: 0
 
-  &__main
-    // padding-top: 53%
+  &__inner
+    display: flex
+    justify-content: space-between
+
+    +mw(1000)
+      flex-direction: column
+      margin-left: 0
+      margin-right: 0
+
+  
+
+
+  &__col--left
     position: relative
+    min-height: 600px
+    display: flex
+    justify-content: flex-start
+    flex-grow: 1
     overflow: hidden
-    background-color: #deeeb0
-    height: 770px
 
-    +mw(1440)
-      padding-top: 0
-      height: 770px
+    +mw(1000)
+      justify-content: center
+      background-color: #E4F4B7
 
-    +mw(600)
-      height: 677px
 
-  &__bg
-    position: absolute
-    width: 100%
-    // height: 100%
-    left: 50%
-    transform: translateX(-50%)
-    top: 0
-    min-width: 1440px
+  &__title-wrap
+    z-index: 1
 
-    +mw(600)
-      left: 0
-      transform: none
-      min-width: auto
+    +mw(1000)
+      padding-left: 20px
+      padding-right: 20px
+      width: 100%
+      padding-bottom: 40px
+      
 
   &__title
     margin-bottom: 40px
+
+    +mw(1000)
+      margin-bottom: 178px
 
     +mw(600)
       padding-top: 40px
       margin-bottom: 178px
 
-  &__calculation-inner
-    display: flex
-    justify-content: flex-end
 
-    +mw(600)
-      margin-left: 0
-      margin-right: 0
+  &__bg
+    position: absolute
+    right: 0
+    bottom: 0
+    height: 100%
+    width: auto
+    min-width: 920px
+
+    +mw(1000)
+      top: 60px
+      height: auto
+      min-width: auto
+
 
   &__calculation-wrapper
-    width: 100%
-    position: absolute
-    top: 170px
-    // bottom: -82px
     z-index: 1
+    width: 420px
+    flex-shrink: 0
+    position: relative
+
+    +mw(1000)
+      width: auto
 
     +mw(600)
+      position: static
+
+  &__calculation-inner
+    position: absolute
+    left: 0
+    top: 0
+
+    +mw(1000)
       position: static
 
   &__calculation
@@ -69,7 +101,7 @@
     padding-top: 40px
     padding-bottom: 21px
 
-    +mw(600)
+    +mw(1000)
       width: 100%
       padding-left: 20px
       padding-right: 20px
@@ -100,21 +132,9 @@
         margin-bottom: 20px
 
     &__input
-      // padding-left: 20px
-      // padding-top: 22px
-      // padding-bottom: 22px
-      // display: block
-      // background-color: #F0F0F4
-      // border: 1px solid #E6E6EA
-      // border-radius: 4px
-      // width: 100%
-      // font-size: rem(18)
-      // line-height: rem(26)
-      // color: #8D8D93
-      // font-weight: 500
 
       &:hover
-        background-color: #565657
+        // background-color: #565657
 
       &:focus,
       &:active
@@ -128,54 +148,23 @@
       +mw(600)
         margin-bottom: 20px
 
-    // &__consent
-    //   font-size: rem(12)
-    //   line-height: rem(16)
-    //   color: #7C859D
-    //   text-align: center
-    //   margin-top: 0
-    //   margin-bottom: 0
-
-
-.promo-main
-
-  &__wrapper
-    position: absolute
-    left: 50%
-    transform: translateX(-50%)
-    top: 170px
-    width: 100%
-    z-index: 1
-
-    +mw(600)
-      top: 0
 
 
 
+  &__calculation-inner
 
 
+  &__calculation
+
+
+.container
 
 .title
-  font-size: rem(44)
-  line-height: rem(48)
-  margin-top: 0
-  font-weight: 600
-  color: #46404C
-
-  +mw(600)
-    font-size: rem(22)
-    line-height: rem(26)
-
-.promo__plus
 
 .plus
-  // margin-top: 0
-  // margin-bottom: 0
-  // padding-left: 0
   width: 320px
 
   &__item
-    // list-style: none
     padding-left: 20px
     padding-top: 16px
     padding-bottom: 16px
@@ -206,6 +195,18 @@
     +mw(600)
       width: 100%
 
+.plus
+
+  &__item
+
+
+  &__icon
+
+
+  &__text
+
+
+.plus--promo
 
 .calculation
 
@@ -253,6 +254,47 @@
   &__politic
     color: #7C859D
 
+.calculation
+
+  &__field
+
+
+  &__field--head
+
+
+  &__title
+
+
+  &__subtitle
+
+
+  &__control
+
+
+  &__label
+
+
+  &__select
+
+
+  &__head
+
+
+  &__input
+
+
+  &__btn
+
+
+  &__consent
+
+
+  &__politic
+
+
+.size-3
+
+.btn
 
 .btn
   display: block
@@ -281,7 +323,6 @@
   &:active
     background-color: #6C9B07
 
-
 .heapBox
   position: relative
 
@@ -302,6 +343,10 @@
     color: #8D8D93
     font-weight: 500
     z-index: 10
+    -webkit-tap-highlight-color: transparent
+
+    &:hover
+      background-color: #FAFAFB
 
   & .handler
     width: 6px
@@ -320,20 +365,49 @@
     left: 0
     width: 100%
     top: 70px
-    overflow: hidden
+    // overflow: hidden
+    overflow-y: auto
+    max-height: 300px
     z-index: 1
+    margin-top: 10px
+    padding-left: 0
+    background-color: #fff
+    border: 1px solid #e6e6ea
+    border-radius: 4px
+
+    & .sliderDown 
+
 
 
 .heapOptions
-  margin-top: 10px
-  // margin-bottom: 0
   padding-left: 0
   background-color: #fff
   border: 1px solid #e6e6ea
   border-radius: 4px
 
   & .heapOption
-    // list-style: none
+
+    & a
+      font-size: rem(18)
+      line-height: rem(21)
+      font-weight: 600
+      color: #000
+      display: block
+      padding-top: 5px
+      padding-bottom: 5px
+      padding-left: 20px
+
+      &:hover
+        background-color: #f0f0f4
+
+  & .heapOption:first-child
+    display: none
+
+.hover-opacity
+
+.heapOptions
+
+  & .heapOption
 
     & a
       font-size: rem(18)

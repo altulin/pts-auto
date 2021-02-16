@@ -1,5 +1,8 @@
 .faq
   margin-bottom: 160px
+
+  +mw(1000)
+    margin-bottom: 70px
   
   &__inner
     display: flex
@@ -11,7 +14,15 @@
     background: #F6F6F6
     border-radius: 20px
 
-  &__col
+    +mw(1000)
+      flex-direction: column-reverse
+      padding-top: 70px
+      padding-left: 20px
+      padding-right: 20px
+      padding-bottom: 70px
+      margin-left: 0
+      margin-right: 0
+      border-radius: 0
 
 
   &__col--info
@@ -19,15 +30,34 @@
     margin-right: 55px
     flex-shrink: 0
 
+    +mw(1000)
+      width: auto
+      margin-right: 0
+
 
   &__title
     margin-bottom: 34px
-    font-size: rem(36)
+    
+    &--mobile
+      display: none
 
+      +mw(1000)
+        display: block
+        text-align: center
+
+    &--desktop
+
+      +mw(1000)
+        display: none
 
   &__text
 
+    +mw(1000)
+      text-align: center
+
     &--center
+      font-size: rem(16)
+      color: #5C6068
       text-align: center
 
 
@@ -38,7 +68,9 @@
     margin-right: auto
     width: 324px
     position: relative
-    // height: 266px
+
+    +mw(600)
+      width: auto
 
 
   &__socials
@@ -55,6 +87,9 @@
     background-color: #fff
     border-radius: 10px
     border: 1px solid rgba(124, 133, 157, 0.1)
+
+    +mw(600)
+      top: -35px
 
     &::after
       content: ""
@@ -94,38 +129,15 @@
   &__col--accord
     flex-grow: 1
 
+    +mw(1000)
+      margin-bottom: 40px
 
-  &__answer
+  & .r-tabs .r-tabs-nav
+    display: none
 
+  & .r-tabs .r-tabs-accordion-title
+    display: block
 
-.title
-
-.size-1
-
-.socials
-
-  &__item
-
-
-  &__link
-
-
-  &__link--tg
-
-
-  &__link--viber
-
-
-  &__link--watsapp
-
-
-.hover-opacity
-
-.accord
-
-  &__list
-
-
-  &__item
-
+  & .r-tabs-accordion-title .r-tabs-anchor
+    padding-right: 70px
 

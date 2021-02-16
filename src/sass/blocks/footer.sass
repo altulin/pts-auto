@@ -1,6 +1,9 @@
 .page-footer
   margin-bottom: 160px
 
+  +mw(768)
+    margin-bottom: 32px
+
   &__inner
 
   &__top
@@ -13,10 +16,8 @@
       margin-bottom: 32px
 
 
-  &__logo-link
-
-
   &__logo-img
+    display: block
 
 
   &__text
@@ -46,39 +47,20 @@
     align-items: center
     margin-bottom: 85px
 
+    +mw(768)
+      flex-direction: column
+      align-items: flex-start
+      margin-bottom: 60px
+
 
   &__bottom
     display: flex
     justify-content: space-between
     align-items: center
 
-
-.top
-
-.contacts
-
-  &__tel--top
-
-
-.contacts-tel
-
-.hover-opacity
-
-.socials
-
-  &__item
-
-
-  &__link
-
-
-  &__link--tg
-
-
-  &__link--viber
-
-
-  &__link--watsapp
+    +mw(768)
+      flex-direction: column
+      align-items: flex-start
 
 
 .middle
@@ -86,6 +68,9 @@
   &__copy
     font-size: rem(14)
     font-weight: 600
+
+    +mw(768)
+      margin-bottom: 10px
 
 
   &__polit
@@ -104,5 +89,9 @@
     font-weight: 600
     color: #8D8D93
     width: 365px
+
+    +mw(768)
+      width: auto
+      margin-bottom: 10px
 
 

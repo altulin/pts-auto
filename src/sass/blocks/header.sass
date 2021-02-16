@@ -56,7 +56,6 @@
       display: block
 
   &__menu
-    // display: none
     width: 56px
     height: 60px
     background-repeat: no-repeat
@@ -84,22 +83,16 @@
       transform: translateX(20px)
 
 
-
-
-
 .header-nav
 
   &__list
-    // margin-top: 0
-    // margin-bottom: 0
     padding-left: 0
     display: flex
     align-items: center
 
   &__item
-    // list-style: none
 
-    & + .header-nav__item
+    & + .header-nav__item:not(.header-nav__item--first)
       margin-left: 60px
 
 
@@ -194,8 +187,6 @@
       display: flex
 
 
-
-
 .contacts
   display: flex
   align-items: center
@@ -223,13 +214,9 @@
         border-right: 0.5px solid #DDDEE3;
 
 .socials
-  // margin-top: 0
-  // margin-bottom: 0
   padding-left: 0
-  // display: flex
 
   &__item
-    // list-style: none
 
     & + li
       margin-left: 10px
@@ -260,7 +247,6 @@
   max-width: none
   top: 60px
   pointer-events: auto
-  // border-top: 0.5px solid #E4E4E4
 
 .mm-ocd__backdrop
   width: 0

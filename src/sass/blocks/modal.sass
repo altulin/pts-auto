@@ -1,0 +1,82 @@
+.blocker
+  padding: 0
+
+.modal
+  max-width: none
+  padding-top: 50px
+  padding-bottom: 50px
+  padding-left: 50px
+  box-shadow: none
+
+  +mw(1000)
+    padding-left: 30px
+
+  +mw(600)
+    padding-left: 0
+    padding-right: 0
+    padding-top: 70px
+    width: 100%
+
+  & a.close-modal
+    background-image: url("../img/dest/close-modal.png")
+    top: 30px
+    right: 30px
+
+    +mw(600)
+      top: 15px
+      right: 15px
+
+
+#heapbox_modal-calculation-brand
+  display: block !important
+
+#heapbox_modal-calculation-model
+  display: block !important
+
+#heapbox_modal-calculation-year
+  display: block !important
+
+.calculation__input:active
+  outline: 0
+  border: 1px solid #8cbd00
+  background-color: #fff
+
+.calculation__input:focus 
+    outline: 0
+    border: 1px solid #8cbd00
+    background-color: #fff
+
+.heapBox.open
+  .holder
+    outline: 0
+    border: 1px solid #8cbd00
+    background-color: #fff
+    border-radius: 4px
+
+.blocker
+  background-color: #fff
+
+
+.thank
+  text-align: center
+  vertical-align: inherit
+
+  +mw(600)
+    padding-left: 20px
+    padding-right: 20px
+
+  &__img-wrap
+    background-image: url(../img/dest/confirm-big.png)
+    background-repeat: no-repeat
+    width: 80px
+    height: 80px
+    margin-bottom: 40px
+    margin-left: auto
+    margin-right: auto
+
+  &__title
+    margin-bottom: 40px
+
+  &__text
+    font-size: rem(20)
+    line-height: 1.2

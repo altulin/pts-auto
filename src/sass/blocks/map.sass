@@ -14,14 +14,17 @@
     flex-wrap: wrap
 
     +mw(768)
-    flex-direction: column
-    align-items: flex-start
+      flex-direction: column
+      align-items: flex-start
 
 
 
   &__item
     display: flex
     flex-direction: column
+
+    +mw(600)
+      flex-direction: row
 
     & + li
       margin-top: 20px
@@ -36,6 +39,12 @@
 
   &__term
     margin-bottom: 5px
+
+    +mw(600)
+      margin-right: 14px
+      margin-bottom: 0
+      flex-shrink: 0
+      width: 80px
 
 
   &__def

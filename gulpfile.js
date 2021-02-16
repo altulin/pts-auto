@@ -25,12 +25,13 @@ function scripts() {
     'node_modules/jquery/dist/jquery.min.js', // Пример подключения библиотеки
     'node_modules/mmenu-light/dist/mmenu-light.js', // Пример подключения библиотеки
     'src/js/libs/*',
-    'src/js/app.js', // Пользовательские скрипты, использующие библиотеку, должны быть подключены в конце
+    'src/js/catalog.js', // Пользовательские скрипты, использующие библиотеку, должны быть подключены в конце
+    'src/js/app.js' // Пользовательские скрипты, использующие библиотеку, должны быть подключены в конце
   ])
     .pipe(sourcemaps.init())
     .pipe(concat('app.min.js')) // Конкатенируем в один файл
-    .pipe(uglify()) // Сжимаем JavaScript
-    // .pipe(sourcemaps.write()) //добавляем карту
+    // .pipe(uglify()) // Сжимаем JavaScript
+    .pipe(sourcemaps.write()) //добавляем карту
     .pipe(dest('src/js')) // Выгружаем готовый файл в папку назначения
     .pipe(browserSync.stream()) // Триггерим Browsersync для обновления страницы
 }

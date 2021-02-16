@@ -33,7 +33,7 @@
       margin-bottom: 40px
 
 
-.container
+
 
 .calc
 
@@ -99,52 +99,6 @@
         font-weight: 500
 
 
-.title
-
-.calculation
-
-  &__field
-
-
-  &__field--head
-
-
-  &__title
-
-
-  &__subtitle
-
-
-  &__control
-
-
-  &__label
-
-
-  &__select
-
-
-  &__head
-
-
-  &__input
-
-
-  &__btn
-
-
-  &__consent
-
-
-  &__politic
-
-
-.size-3
-
-.btn
-
-.hover-opacity
-
 .review
 
   &__title
@@ -188,6 +142,10 @@
   display: flex
   justify-content: space-between
 
+  &--hide
+    display: none
+
+  
   +mw(768)
     flex-direction: column
     padding: 20px
@@ -195,7 +153,7 @@
   & + .card
     margin-top: 20px
 
-  &__col
+  
 
 
   &__col--left
@@ -302,7 +260,6 @@
     padding-bottom: 11px
     text-align: center
     padding-left: 0
-    -webkit-tap-highlight-color: transparent
 
   & .r-tabs-accordion-title .r-tabs-anchor::after
     background-image: url(../img/dest/arrow-black.svg)
@@ -320,3 +277,9 @@
     padding: 0
     margin-bottom: 20px
 
+.r-tabs-accordion-title .r-tabs-anchor
+  -webkit-tap-highlight-color: transparent
+  margin-bottom: 10px
+
+.r-tabs-accordion-title
+  margin-bottom: 0

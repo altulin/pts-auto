@@ -24,8 +24,6 @@
       padding-right: 30px
       padding-top: 61px
       padding-bottom: 30px
-      
-      // background-image: url(../img/dest/man-mob.png)
       background-image: none
       background-size: auto
 
@@ -96,6 +94,7 @@
     border-left: 1px solid transparent
     border-right: 1px solid transparent
     font-weight: 600
+    -webkit-tap-highlight-color: transparent
         
 
 .r-tabs-state-active .tabs-box__link
@@ -129,7 +128,8 @@
       height: 30px
       position: absolute
       right: 20px
-      top: 15px
+      top: 50%
+      transform: translateY(-50%)
   
   &.r-tabs-state-active
     margin-bottom: 0
@@ -140,7 +140,7 @@
       color: #8CBD00
 
       &::after
-        transform: rotate(90deg)
+        transform: rotate(90deg) translateX(-50%)
 
 
 .tabs-content

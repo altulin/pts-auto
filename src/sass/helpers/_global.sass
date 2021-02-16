@@ -4,14 +4,14 @@
   box-sizing: inherit
 
 *
-  outline: 1px solid red
+  // outline: 1px solid red
 
 html
   box-sizing: border-box
   font-size: 16px
   // font-size: calc(16px/100 + 4.95vw)
 
-  +mw(1200)
+  +mw(768)
     font-size: calc(16px + 6 * ((100vw - 320px) / 680))
     // font-size: calc(16px/100 + 2.62vw)
 
@@ -20,8 +20,6 @@ body
   width: 100%
   background-color: $white
   +font(Gilroy)
-
-  // @include font("Roboto")
 
 ul
   margin-top: 0
@@ -46,11 +44,6 @@ img
   max-width: 100%
   height: auto
 
-.future
-  all: initial
-  all: inherit
-  all: unset
-
 .size-1
   font-size: rem(18)
   line-height: rem(24)
@@ -62,10 +55,6 @@ img
 .size-3
   font-size: rem(24)
   line-height: rem(28)
-
-  // .size-4
-  //   font-size: 18(rem)
-  //   line-height: 26(rem)
 
 .container
   max-width: 1240px

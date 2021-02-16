@@ -22,7 +22,7 @@
               Получите деньги под ПТС<br> в день обращения<br> в Иркутске
             </p>
           </li>
-          <li class="header-nav__item">
+          <li class="header-nav__item header-nav__item--first">
             <a class="header-nav__link  hover-opacity" href="">Процесс</a>
           </li>
           <li class="header-nav__item">
@@ -68,11 +68,13 @@
     </div>
   </header>
   <main class="page-main">
+
     <section class="promo">
-      <div class="promo__main promo-main">
-        <div class="promo-main__wrapper">
-          <div class="promo-main__inner container">
-            <h1 class="promo__title title">Получите деньги под ПТС<br> в день обращения<br> в Иркутске</h1>
+      <div class="promo__inner container">
+
+        <div class="promo__col promo__col--left">
+          <div class="promo__title-wrap">
+            <h1 class="promo__title title">Получите деньги под&nbsp;ПТС<br> в день обращения<br> в Иркутске</h1>
             <ul class="promo__plus plus plus--promo">
               <li class="plus__item">
                 <figure class="plus__icon"></figure>
@@ -100,69 +102,146 @@
               </li>
             </ul>
           </div>
+          <picture>
+            <source srcset="img/dest/image-68-mob.png" media="(max-width: 600px)"/>
+            <img class="promo__bg" src="img/dest/image-68.png" alt="Получите деньги под ПТС" width="1440" height="770">
+          </picture>
         </div>
-        <picture>
-          <source srcset="img/dest/promo-bg-600w.jpg" media="(max-width: 600px)" />
-          <!-- <img class="promo__bg" src="img/dest/promo-bg.jpg" alt="Получите деньги под ПТС" width="1440" height="770"> -->
-          <img class="promo__bg" src="img/dest/image-68.png" alt="Получите деньги под ПТС" width="1440" height="770">
-        </picture>
-        
-      </div>
-      <div class="promo__calculation-wrapper ">
-        <div class="promo__calculation-inner container">
-          <form class="promo__calculation calculation" action="#" method="get" name="calculation-car">
-            <fieldset class="calculation__field calculation__field--head">
-              <legend class="calculation__title size-3">Узнайте максимальную<br>сумму займа и рассчитайте<br>ежемесячный платеж</legend>
-            </fieldset>
-            <fieldset class="calculation__field">
-              <legend class="calculation__subtitle">Данные автомобиля:</legend>
 
-              <div class="calculation__control">
-                <label class="calculation__label" for="calculation-brand">Марка вашего авто</label>
-                <select id="calculation-brand" class="calculation__select" placeholder="Марка вашего авто">
-                  <option value="1" class="calculation__head">Марка вашего авто</option>
-                  <option value="2">Toyota</option>
-                  <option value="3">Nissan</option>
-                  <option value="4">Mazda</option>
-                </select>
-              </div>
 
-              <div class="calculation__control">
-                <label class="calculation__label" for="calculation-model">Модель вашего авто</label>
-                <select id="calculation-model" class="calculation__select" placeholder="Модель вашего авто">
-                  <option value="1">Модель вашего авто</option>
-                  <option value="2">Corolla</option>
-                  <option value="3">A6</option>
-                  <option value="4">Q5</option>
-                </select>
-              </div>
+        <div class="promo__calculation-wrapper ">
+          <div class="promo__calculation-inner">
+            <form class="promo__calculation calculation" action="#" method="get" name="calculation-car">
+              <fieldset class="calculation__field calculation__field--head">
+                <legend class="calculation__title size-3">Узнайте максимальную<br>сумму займа и рассчитайте<br>ежемесячный платеж</legend>
+              </fieldset>
+              <fieldset class="calculation__field">
+                <legend class="calculation__subtitle">Данные автомобиля:</legend>
+  
+                <div class="calculation__control">
+                  <label class="calculation__label" for="first-calculation-brand">Марка вашего авто</label>
+                  <select id="first-calculation-brand" class="calculation__select" placeholder="Марка вашего авто">
+                    <option value="" class="calculation__head">Марка вашего авто</option>
+                    <option value="0">Acura</option>
+                    <option value="1">Audi</option>
+                    <option value="2">BMW</option>
+                    <option value="3">BYD</option>
+                    <option value="4">Cadillac</option>
+                    <option value="5">Chery</option>
+                    <option value="6">Chevrolet</option>
+                    <option value="7">Chrysler</option>
+                    <option value="8">Citroen</option>
+                    <option value="9">Daewoo</option>
+                    <option value="10">Daihatsu</option>
+                    <option value="11">Datsun</option>
+                    <option value="12">Fiat</option>
+                    <option value="13">Ford</option>
+                    <option value="14">Great Wall</option>
+                    <option value="15">Haval</option>
+                    <option value="16">Honda</option>
+                    <option value="17">Hyundai</option>
+                    <option value="18">Infiniti</option>
+                    <option value="19">Isuzu</option>
+                    <option value="20">Jeep</option>
+                    <option value="21">Kia</option>
+                    <option value="22">LADA (ВАЗ)</option>
+                    <option value="23">Land Rover</option>
+                    <option value="24">Lexus</option>
+                    <option value="25">Lifan</option>
+                    <option value="26">Mazda</option>
+                    <option value="27">Mercedes-Benz</option>
+                    <option value="28">Mitsubishi</option>
+                    <option value="29">Nissan</option>
+                    <option value="30">Opel</option>
+                    <option value="31">Peugeot</option>
+                    <option value="32">Porsche</option>
+                    <option value="33">Renault</option>
+                    <option value="34">Saab</option>
+                    <option value="35">Skoda</option>
+                    <option value="36">SsangYong</option>
+                    <option value="37">Subaru</option>
+                    <option value="38">Suzuki</option>
+                    <option value="39">Toyota</option>
+                    <option value="40">Volkswagen</option>
+                    <option value="41">Volvo</option>
+                    <option value="42">ГАЗ</option>
+                    <option value="43">ЗАЗ</option>
+                    <option value="44">УАЗ</option>
+                    <option value="45">Эксклюзив</option>
+                  </select>
+                </div>
 
-              <div class="calculation__control">
-                <label class="calculation__label" for="calculation-year">Год выпуска авто</label>
-                <select id="calculation-year" class="calculation__select" placeholder="Год выпуска авто">
-                  <option value="1">Год выпуска авто</option>
-                  <option value="2">2000</option>
-                  <option value="3">2010</option>
-                  <option value="4">2015</option>
-                </select>
-              </div>
 
-            </fieldset>
-            <fieldset class="calculation__field">
-              <legend class="calculation__subtitle">Ваш номер телефона *</legend>
-              <div class="calculation__control">
-                <label class="calculation__label" for="calculation-phone">Ваш номер телефона</label>
-                <input class="calculation__input" type="text" id="calculation-phone">
-              </div>
-            </fieldset>
 
-            <button class="calculation__btn btn">Сделать расчет</button>
-            <p class="calculation__consent">нажимая на кнопку, вы подтвержаете согласие с&nbsp;<a class="calculation__politic hover-opacity" href="#">политикой конфиденциальности</a></p>
-          </form>
+                
+  
+                <div class="calculation__control">
+                  <label class="calculation__label" for="first-calculation-model">Модель вашего авто</label>
+                  <select id="first-calculation-model" class="calculation__select" placeholder="Модель вашего авто">
+                    <option value="0">Модель вашего авто</option>
+                    
+                  </select>
+                </div>
+  
+                <div class="calculation__control">
+                  <label class="calculation__label" for="first-calculation-year">Год выпуска авто</label>
+                  <select id="first-calculation-year" class="calculation__select" placeholder="Год выпуска авто">
+                    <option value="">Год выпуска авто</option>
+                    <option value="0">2020</option>
+                    <option value="1">2019</option>
+                    <option value="2">2018</option>
+                    <option value="3">2017</option>
+                    <option value="4">2016</option>
+                    <option value="5">2015</option>
+                    <option value="6">2014</option>
+                    <option value="7">2013</option>
+                    <option value="8">2012</option>
+                    <option value="9">2011</option>
+                    <option value="10">2010</option>
+                    <option value="11">2009</option>
+                    <option value="12">2008</option>
+                    <option value="13">2007</option>
+                    <option value="14">2006</option>
+                    <option value="15">2005</option>
+                    <option value="16">2004</option>
+                    <option value="17">2003</option>
+                    <option value="18">2002</option>
+                    <option value="19">2001</option>
+                    <option value="20">2000</option>
+                    <option value="21">1999</option>
+                    <option value="22">1998</option>
+                    <option value="23">1997</option>
+                    <option value="24">1996</option>
+                    <option value="25">1995</option>
+                    <option value="26">1994</option>
+                    <option value="27">1993</option>
+                    <option value="28">1992</option>
+                    <option value="29">1991</option>
+                    <option value="30">1990</option>
+                  </select>
+                </div>
+  
+              </fieldset>
+              <fieldset class="calculation__field">
+                <legend class="calculation__subtitle">Ваш номер телефона *</legend>
+                <div class="calculation__control">
+                  <label class="calculation__label" for="calculation-phone">Ваш номер телефона</label>
+                  <input class="calculation__input input-phone" type="text" id="calculation-phone" placeholder="+7 (___) ___-____">
+                </div>
+              </fieldset>
+  
+              <button class="calculation__btn btn">Сделать расчет</button>
+              <p class="calculation__consent">нажимая на кнопку, вы подтвержаете согласие с&nbsp;<a class="calculation__politic hover-opacity" href="#">политикой конфиденциальности</a></p>
+            </form>
+          </div>
+        </div>
+
         </div>
       </div>
-
     </section>
+
+
+    
 
     <section class="conditions">
       <div class="conditions__inner container box-bg box-border">
@@ -274,7 +353,7 @@
             то&nbsp;обязательно предварительно проконсультируйтесь с&nbsp;нашим специалистом.
           </p>
           <a class="consult__tel contacts-tel hover-opacity" href="tel:+1234567890">8 (3952) 74-66-99</a>
-          <a class="consult__link hover-opacity size-1" href="#">Получить консультацию</a>
+          <a class="consult__link hover-opacity size-1" rel="modal:open" href="#form-modal">Получить консультацию</a>
 
         </div>
       </div>
@@ -349,10 +428,53 @@
               <div class="calculation__control">
                 <label class="calculation__label" for="order-calculation-brand">Марка вашего авто</label>
                 <select id="order-calculation-brand" class="calculation__select" placeholder="Марка вашего авто">
-                  <option value="1" class="calculation__head">Марка вашего авто</option>
-                  <option value="2">Toyota</option>
-                  <option value="3">Nissan</option>
-                  <option value="4">Mazda</option>
+                  <option value="" class="calculation__head">Марка вашего авто</option>
+                  <option value="0">Acura</option>
+                  <option value="1">Audi</option>
+                  <option value="2">BMW</option>
+                  <option value="3">BYD</option>
+                  <option value="4">Cadillac</option>
+                  <option value="5">Chery</option>
+                  <option value="6">Chevrolet</option>
+                  <option value="7">Chrysler</option>
+                  <option value="8">Citroen</option>
+                  <option value="9">Daewoo</option>
+                  <option value="10">Daihatsu</option>
+                  <option value="11">Datsun</option>
+                  <option value="12">Fiat</option>
+                  <option value="13">Ford</option>
+                  <option value="14">Great Wall</option>
+                  <option value="15">Haval</option>
+                  <option value="16">Honda</option>
+                  <option value="17">Hyundai</option>
+                  <option value="18">Infiniti</option>
+                  <option value="19">Isuzu</option>
+                  <option value="20">Jeep</option>
+                  <option value="21">Kia</option>
+                  <option value="22">LADA (ВАЗ)</option>
+                  <option value="23">Land Rover</option>
+                  <option value="24">Lexus</option>
+                  <option value="25">Lifan</option>
+                  <option value="26">Mazda</option>
+                  <option value="27">Mercedes-Benz</option>
+                  <option value="28">Mitsubishi</option>
+                  <option value="29">Nissan</option>
+                  <option value="30">Opel</option>
+                  <option value="31">Peugeot</option>
+                  <option value="32">Porsche</option>
+                  <option value="33">Renault</option>
+                  <option value="34">Saab</option>
+                  <option value="35">Skoda</option>
+                  <option value="36">SsangYong</option>
+                  <option value="37">Subaru</option>
+                  <option value="38">Suzuki</option>
+                  <option value="39">Toyota</option>
+                  <option value="40">Volkswagen</option>
+                  <option value="41">Volvo</option>
+                  <option value="42">ГАЗ</option>
+                  <option value="43">ЗАЗ</option>
+                  <option value="44">УАЗ</option>
+                  <option value="45">Эксклюзив</option>
                 </select>
               </div>
 
@@ -360,19 +482,44 @@
                 <label class="calculation__label" for="order-calculation-model">Модель вашего авто</label>
                 <select id="order-calculation-model" class="calculation__select" placeholder="Модель вашего авто">
                   <option value="1">Модель вашего авто</option>
-                  <option value="2">Corolla</option>
-                  <option value="3">A6</option>
-                  <option value="4">Q5</option>
                 </select>
               </div>
 
               <div class="calculation__control">
                 <label class="calculation__label" for="order-calculation-year">Год выпуска авто</label>
                 <select id="order-calculation-year" class="calculation__select" placeholder="Год выпуска авто">
-                  <option value="1">Год выпуска авто</option>
-                  <option value="2">2000</option>
-                  <option value="3">2010</option>
-                  <option value="4">2015</option>
+                  <option value="">Год выпуска авто</option>
+                  <option value="0">2020</option>
+                  <option value="1">2019</option>
+                  <option value="2">2018</option>
+                  <option value="3">2017</option>
+                  <option value="4">2016</option>
+                  <option value="5">2015</option>
+                  <option value="6">2014</option>
+                  <option value="7">2013</option>
+                  <option value="8">2012</option>
+                  <option value="9">2011</option>
+                  <option value="10">2010</option>
+                  <option value="11">2009</option>
+                  <option value="12">2008</option>
+                  <option value="13">2007</option>
+                  <option value="14">2006</option>
+                  <option value="15">2005</option>
+                  <option value="16">2004</option>
+                  <option value="17">2003</option>
+                  <option value="18">2002</option>
+                  <option value="19">2001</option>
+                  <option value="20">2000</option>
+                  <option value="21">1999</option>
+                  <option value="22">1998</option>
+                  <option value="23">1997</option>
+                  <option value="24">1996</option>
+                  <option value="25">1995</option>
+                  <option value="26">1994</option>
+                  <option value="27">1993</option>
+                  <option value="28">1992</option>
+                  <option value="29">1991</option>
+                  <option value="30">1990</option>
                 </select>
               </div>
 
@@ -380,7 +527,7 @@
             <fieldset class="calculation__field calculation__field--personal">
               <div class="calculation__control">
                 <label class="calculation__label" for="order-calculation-phone">Ваш номер телефона *</label>
-                <input class="calculation__input" type="text" id="order-calculation-phone">
+                <input class="calculation__input input-phone" type="text" id="order-calculation-phone" placeholder="+7 (___) ___-____">
               </div>
               <div class="calculation__control">
                 <label class="calculation__label" for="order-calculation-name">Ваше имя</label>
@@ -521,7 +668,7 @@
               для осмотра автомобиля<br>
               и заключения договора</h3>
             <p class="visit__text size-1">Если у вас нет возможности приехать в&nbsp;наш&nbsp;офис. </p>
-            <a class="visit__link btn" href="#" target="_blank">Вызвать специалиста</a>
+            <a class="visit__link btn" href="#form-modal" rel="modal:open" target="_blank">Вызвать специалиста</a>
           </div>
           <figure class="visit__img-wrap">
             <picture>
@@ -564,10 +711,53 @@
               <div class="calculation__control">
                 <label class="calculation__label" for="example-calculation-brand">Марка вашего авто</label>
                 <select id="example-calculation-brand" class="calculation__select" placeholder="Марка вашего авто">
-                  <option value="1" class="calculation__head">Марка вашего авто</option>
-                  <option value="2">Toyota</option>
-                  <option value="3">Nissan</option>
-                  <option value="4">Mazda</option>
+                  <option value="" class="calculation__head">Марка вашего авто</option>
+                  <option value="0">Acura</option>
+                  <option value="1">Audi</option>
+                  <option value="2">BMW</option>
+                  <option value="3">BYD</option>
+                  <option value="4">Cadillac</option>
+                  <option value="5">Chery</option>
+                  <option value="6">Chevrolet</option>
+                  <option value="7">Chrysler</option>
+                  <option value="8">Citroen</option>
+                  <option value="9">Daewoo</option>
+                  <option value="10">Daihatsu</option>
+                  <option value="11">Datsun</option>
+                  <option value="12">Fiat</option>
+                  <option value="13">Ford</option>
+                  <option value="14">Great Wall</option>
+                  <option value="15">Haval</option>
+                  <option value="16">Honda</option>
+                  <option value="17">Hyundai</option>
+                  <option value="18">Infiniti</option>
+                  <option value="19">Isuzu</option>
+                  <option value="20">Jeep</option>
+                  <option value="21">Kia</option>
+                  <option value="22">LADA (ВАЗ)</option>
+                  <option value="23">Land Rover</option>
+                  <option value="24">Lexus</option>
+                  <option value="25">Lifan</option>
+                  <option value="26">Mazda</option>
+                  <option value="27">Mercedes-Benz</option>
+                  <option value="28">Mitsubishi</option>
+                  <option value="29">Nissan</option>
+                  <option value="30">Opel</option>
+                  <option value="31">Peugeot</option>
+                  <option value="32">Porsche</option>
+                  <option value="33">Renault</option>
+                  <option value="34">Saab</option>
+                  <option value="35">Skoda</option>
+                  <option value="36">SsangYong</option>
+                  <option value="37">Subaru</option>
+                  <option value="38">Suzuki</option>
+                  <option value="39">Toyota</option>
+                  <option value="40">Volkswagen</option>
+                  <option value="41">Volvo</option>
+                  <option value="42">ГАЗ</option>
+                  <option value="43">ЗАЗ</option>
+                  <option value="44">УАЗ</option>
+                  <option value="45">Эксклюзив</option>
                 </select>
               </div>
 
@@ -575,19 +765,45 @@
                 <label class="calculation__label" for="example-calculation-model">Модель вашего авто</label>
                 <select id="example-calculation-model" class="calculation__select" placeholder="Модель вашего авто">
                   <option value="1">Модель вашего авто</option>
-                  <option value="2">Corolla</option>
-                  <option value="3">A6</option>
-                  <option value="4">Q5</option>
+                  
                 </select>
               </div>
 
               <div class="calculation__control">
                 <label class="calculation__label" for="example-calculation-year">Год выпуска авто</label>
                 <select id="example-calculation-year" class="calculation__select" placeholder="Год выпуска авто">
-                  <option value="1">Год выпуска авто</option>
-                  <option value="2">2000</option>
-                  <option value="3">2010</option>
-                  <option value="4">2015</option>
+                  <option value="">Год выпуска авто</option>
+                  <option value="0">2020</option>
+                  <option value="1">2019</option>
+                  <option value="2">2018</option>
+                  <option value="3">2017</option>
+                  <option value="4">2016</option>
+                  <option value="5">2015</option>
+                  <option value="6">2014</option>
+                  <option value="7">2013</option>
+                  <option value="8">2012</option>
+                  <option value="9">2011</option>
+                  <option value="10">2010</option>
+                  <option value="11">2009</option>
+                  <option value="12">2008</option>
+                  <option value="13">2007</option>
+                  <option value="14">2006</option>
+                  <option value="15">2005</option>
+                  <option value="16">2004</option>
+                  <option value="17">2003</option>
+                  <option value="18">2002</option>
+                  <option value="19">2001</option>
+                  <option value="20">2000</option>
+                  <option value="21">1999</option>
+                  <option value="22">1998</option>
+                  <option value="23">1997</option>
+                  <option value="24">1996</option>
+                  <option value="25">1995</option>
+                  <option value="26">1994</option>
+                  <option value="27">1993</option>
+                  <option value="28">1992</option>
+                  <option value="29">1991</option>
+                  <option value="30">1990</option>
                 </select>
               </div>
 
@@ -596,7 +812,7 @@
               <legend class="calculation__subtitle">Ваш номер телефона *</legend>
               <div class="calculation__control">
                 <label class="calculation__label" for="example-calculation-phone">Ваш номер телефона</label>
-                <input class="calculation__input" type="text" id="example-calculation-phone">
+                <input class="calculation__input input-phone" type="text" id="example-calculation-phone" placeholder="+7 (___) ___-____">
               </div>
             </fieldset>
 
@@ -677,7 +893,7 @@
               </div> 
             </div>
           </div>
-          <div class="review__card card">
+          <div class="review__card card card">
             <div class="card__col card__col--left">
               <figure class="card__img-wrap">
                 <img class="card__img" src="img/dest/auto-3.png" alt="автомобиль">
@@ -713,7 +929,7 @@
               </div> 
             </div>
           </div>
-          <div class="review__card card">
+          <div class="review__card card card--hide">
             <div class="card__col card__col--left">
               <figure class="card__img-wrap">
                 <img class="card__img" src="img/dest/auto-4.png" alt="автомобиль">
@@ -733,11 +949,11 @@
                 </li>
               </ul>
             </div>
-            <div class="card__col card__col--right" id="card-3">
+            <div class="card__col card__col--right" id="card-4">
               <ul class="card__link-wrap">
-                <li><a class="card__link" href="#card__link-3">прочитать отзыв</a></li>
+                <li><a class="card__link" href="#card__link-4">прочитать отзыв</a></li>
               </ul>
-              <div class="card__text-wrap" id="card__link-3">
+              <div class="card__text-wrap" id="card__link-4">
                 <div class="card__item">
                   <span class="card__term">Отзыв :</span><span class="card__def">Анастасия</span>
                 </div>
@@ -751,7 +967,7 @@
               </div> 
             </div>
           </div>
-          <div class="review__card card">
+          <div class="review__card card card--hide">
             <div class="card__col card__col--left">
               <figure class="card__img-wrap">
                 <img class="card__img" src="img/dest/auto-5.png" alt="автомобиль">
@@ -771,11 +987,11 @@
                 </li>
               </ul>
             </div>
-            <div class="card__col card__col--right" id="card-3">
+            <div class="card__col card__col--right" id="card-5">
               <ul class="card__link-wrap">
-                <li><a class="card__link" href="#card__link-3">прочитать отзыв</a></li>
+                <li><a class="card__link" href="#card__link-5">прочитать отзыв</a></li>
               </ul>
-              <div class="card__text-wrap" id="card__link-3">
+              <div class="card__text-wrap" id="card__link-5">
                 <div class="card__item">
                   <span class="card__term">Отзыв :</span><span class="card__def">Альберт</span>
                 </div>
@@ -793,15 +1009,14 @@
       </div>
     </section>
 
-    <!-- <section class="faq">
+    <section class="faq">
       <div class="faq__inner container">
         <div class="faq__col faq__col--info info">
-          <h2 class="faq__title title">
+          <h2 class="faq__title faq__title--desktop title">
             Частые вопросы,<br> которые задают<br> нам клиенты
           </h2>
           <p class="faq__text size-1">Задайте нам вопрос онлайн,<br> в любом удобном для вас мессенжере </p>
           <div class="faq__box">
-
             <ul class="faq__socials socials">
               <li class="socials__item">
                 <a class="socials__link hover-opacity socials__link--tg" href="https://tttttt.me/rus_alex" aria-label="telegram" target="_blank"></a>
@@ -817,9 +1032,12 @@
               <img class="faq__img" src="img/dest/iphone.png" alt="позвоните нам" width="324" height="266">
             </figure>
           </div>
-          <p class="faq__text faq__text--center size-1">Отвечаем в течении 10 минут</p>
+          <p class="faq__text faq__text--center">Отвечаем в течении 10 минут</p>
         </div>
         <div class="faq__col faq__col--accord accord" id="faq">
+          <h3 class="faq__title faq__title--mobile title">
+            Частые вопросы, которые задают нам клиенты
+          </h2>
           <ul class="accord__list">
             <li class="accord__item"><a href="#faq-1">Можно ли оформить договор на автомобиль, если куплен по договору купли-продажи, но не переоформили в ГИБДД?</a></li>
             <li class="accord__item"><a href="#faq-2">Можно оформить, если автомобилем владею по нотариальной доверенности?</a></li>
@@ -854,7 +1072,7 @@
 
         </div>
       </div>
-    </section> -->
+    </section>
 
     <section class="map">
       <div class="map__inner container">
@@ -871,7 +1089,7 @@
             <span class="map__def size-1">г. Иркутск,  Крылатый микрорайон, д.10</span>
           </li>
           <li class="map__item">
-            <a class="map__link btn size-1" href="#">Получить консультацию</a>
+            <a class="map__link btn size-1" rel="modal:open" href="#form-modal">Получить консультацию</a>
           </li>
         </ul>
         <div class="map-cont" id="map"></div>
@@ -920,6 +1138,173 @@
       </div>
     </div>
   </footer>
+
+  <section class="modal order" id="form-modal">
+
+    <div class="order__inner container">
+      <div class="order__col order__col--left">
+        <h2 class="order__title title"><mark class="color-green">Оставьте заявку</mark> и узнайте максимальную сумму, рассчитайте ежемесячный платеж</h2>
+        <form class="order__calculation calculation" action="#" method="get" name="calculation-car">
+          
+          <fieldset class="calculation__field">
+            <legend class="calculation__subtitle">Данные автомобиля:</legend>
+
+            <div class="calculation__control">
+              <label class="calculation__label" for="modal-calculation-brand">Марка вашего авто</label>
+              <select id="modal-calculation-brand" class="calculation__select" placeholder="Марка вашего авто">
+                <option value="" class="calculation__head">Марка вашего авто</option>
+                <option value="0">Acura</option>
+                <option value="1">Audi</option>
+                <option value="2">BMW</option>
+                <option value="3">BYD</option>
+                <option value="4">Cadillac</option>
+                <option value="5">Chery</option>
+                <option value="6">Chevrolet</option>
+                <option value="7">Chrysler</option>
+                <option value="8">Citroen</option>
+                <option value="9">Daewoo</option>
+                <option value="10">Daihatsu</option>
+                <option value="11">Datsun</option>
+                <option value="12">Fiat</option>
+                <option value="13">Ford</option>
+                <option value="14">Great Wall</option>
+                <option value="15">Haval</option>
+                <option value="16">Honda</option>
+                <option value="17">Hyundai</option>
+                <option value="18">Infiniti</option>
+                <option value="19">Isuzu</option>
+                <option value="20">Jeep</option>
+                <option value="21">Kia</option>
+                <option value="22">LADA (ВАЗ)</option>
+                <option value="23">Land Rover</option>
+                <option value="24">Lexus</option>
+                <option value="25">Lifan</option>
+                <option value="26">Mazda</option>
+                <option value="27">Mercedes-Benz</option>
+                <option value="28">Mitsubishi</option>
+                <option value="29">Nissan</option>
+                <option value="30">Opel</option>
+                <option value="31">Peugeot</option>
+                <option value="32">Porsche</option>
+                <option value="33">Renault</option>
+                <option value="34">Saab</option>
+                <option value="35">Skoda</option>
+                <option value="36">SsangYong</option>
+                <option value="37">Subaru</option>
+                <option value="38">Suzuki</option>
+                <option value="39">Toyota</option>
+                <option value="40">Volkswagen</option>
+                <option value="41">Volvo</option>
+                <option value="42">ГАЗ</option>
+                <option value="43">ЗАЗ</option>
+                <option value="44">УАЗ</option>
+                <option value="45">Эксклюзив</option>
+              </select>
+            </div>
+
+            <div class="calculation__control">
+              <label class="calculation__label" for="modal-calculation-model">Модель вашего авто</label>
+              <select id="modal-calculation-model" class="calculation__select" placeholder="Модель вашего авто" >
+                <option value="1">Модель вашего авто</option>
+                
+              </select>
+            </div>
+
+            <div class="calculation__control">
+              <label class="calculation__label" for="modal-calculation-year">Год выпуска авто</label>
+              <select id="modal-calculation-year" class="calculation__select" placeholder="Год выпуска авто">
+                <option value="">Год выпуска авто</option>
+                <option value="0">2020</option>
+                <option value="1">2019</option>
+                <option value="2">2018</option>
+                <option value="3">2017</option>
+                <option value="4">2016</option>
+                <option value="5">2015</option>
+                <option value="6">2014</option>
+                <option value="7">2013</option>
+                <option value="8">2012</option>
+                <option value="9">2011</option>
+                <option value="10">2010</option>
+                <option value="11">2009</option>
+                <option value="12">2008</option>
+                <option value="13">2007</option>
+                <option value="14">2006</option>
+                <option value="15">2005</option>
+                <option value="16">2004</option>
+                <option value="17">2003</option>
+                <option value="18">2002</option>
+                <option value="19">2001</option>
+                <option value="20">2000</option>
+                <option value="21">1999</option>
+                <option value="22">1998</option>
+                <option value="23">1997</option>
+                <option value="24">1996</option>
+                <option value="25">1995</option>
+                <option value="26">1994</option>
+                <option value="27">1993</option>
+                <option value="28">1992</option>
+                <option value="29">1991</option>
+                <option value="30">1990</option>
+              </select>
+            </div>
+
+          </fieldset>
+          <fieldset class="calculation__field calculation__field--personal">
+            <div class="calculation__control">
+              <label class="calculation__label" for="modal-calculation-phone">Ваш номер телефона *</label>
+              <input class="calculation__input input-phone" type="text" id="modal-calculation-phone" placeholder="+7 (___) ___-____">
+            </div>
+            <div class="calculation__control">
+              <label class="calculation__label" for="modal-calculation-name">Ваше имя</label>
+              <input class="calculation__input" type="text" id="modal-calculation-name" placeholder="Ваше имя">
+            </div>
+          </fieldset>
+
+          <button class="calculation__btn btn">Сделать расчет</button>
+          <p class="calculation__consent">нажимая на кнопку, вы подтвержаете согласие с&nbsp;<a class="calculation__politic hover-opacity" href="#">политикой конфиденциальности</a></p>
+        </form>
+      </div>
+      <div class="order__col order__col--right plus-wrapper">
+        <ul class="order__plus plus plus--order">
+          <li class="plus__item">
+            <figure class="plus__icon"></figure>
+            <p class="plus__text">
+              Выдаем до 90%<br>стоимости автомобиля
+            </p>
+          </li>
+          <li class="plus__item">
+            <figure class="plus__icon"></figure>
+            <p class="plus__text">
+              Автомобиль<br>остается у вас
+            </p>
+          </li>
+          <li class="plus__item">
+            <figure class="plus__icon"></figure>
+            <p class="plus__text">
+              С любой кредитной<br>историей
+            </p>
+          </li>
+          <li class="plus__item">
+            <figure class="plus__icon"></figure>
+            <p class="plus__text">
+              Ставка от 2% в месяц
+            </p>
+          </li>
+        </ul>
+        <figure class="plus__img-wrap">
+          <img class="plus__img" src="/img/dest/plus-bg.png" alt="">
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- модальное окно спасибо https://github.com/kylefox/jquery-modal -->
+  <section class="modal thank" id="thank-modal">
+    <figure class="thank__img-wrap"></figure>
+    <h2 class="thank__title title">Спасибо, Ваша<br>
+      заявка принята</h2>
+    <p class="thank__text">В ближайшее время&nbsp;мы&nbsp;свяжемся&nbsp;с&nbsp;Вами<br>и&nbsp;уточним все необходимые детали.</p>
+  </section>
 
 
   <script src="https://maps.api.2gis.ru/2.0/loader.js?pkg=full"></script>

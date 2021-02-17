@@ -51,65 +51,215 @@ $(function(){
 
   const selectsArray = [`first`, `order`, `example`, `modal`]
 
-  for (const select of selectsArray) {
-		// $(`#heapbox_first-calculation-model .holder`).css("pointer-events", "none")
+	// selects form
+	const onHeapbox = (arr) => {
+		for (const select of arr) {
+			$(`#${select}-calculation-model`).heapbox({
+				effect: {'type':'standard'},
+				'openStart': function() {
+					$(`#heapbox_${select}-calculation-model`).parent().removeClass(`calculation__select-wrap--error`);
+				},
+			});
+  		$(`#${select}-calculation-year`).heapbox({effect: {'type':'standard'}});
+  		$(`#heapbox_${select}-calculation-model .holder`).css("pointer-events", "none");
+		}
+  };
+
+
+	const createSelect = (arr) => {
+		for (const select of arr) {
+
+			$(`#${select}-calculation-brand`).heapbox({
+				effect: {'type':'standard'},
+				'openStart': function() {
+					$(`#heapbox_${select}-calculation-brand`).parent().removeClass(`calculation__select-wrap--error`);
+				},
+				'onChange': function(value) {
+					const modelArray = Object.values(dataSet[value])[0]
+					$(`#heapbox_${select}-calculation-model .heapOptions`).empty();
+					$(`#${select}-calculation-model`).empty();
+					$(`#heapbox_${select}-calculation-model .holder`).css("pointer-events", "auto")
+					$(`#heapbox_${select}-calculation-model .holder`).prop("rel", "10")
+
+					
 		
+					modelArray.forEach((item,i) => {
+						$( `#${select}-calculation-model` ).append(`<option value=${item}>${item}</option>`);
+						
+						$(`#heapbox_${select}-calculation-model .heapOptions`).append(
+							`<li class="heapOption">
+								<a href="" rel="${i}" title="${item}" class="">${item}</a>
+							</li>`
+						);
+					})
 
+					$('body').on('click', `#heapbox_${select}-calculation-model .heapOption`, (e) => {
+						e.preventDefault();
 
-    $(`#${select}-calculation-brand`).heapbox({
-      'onChange': function(value) {
-        const modelArray = Object.values(dataSet[value])[0]
-  
-        $(`#heapbox_${select}-calculation-model .heapOptions`).empty();
-        $(`#${select}-calculation-model`).empty();
-				$(`#heapbox_${select}-calculation-model .holder`).css("pointer-events", "auto")
+						$(`#heapbox_${select}-calculation-model .holder`).text(e.target.textContent);
+						$(`#${select}-calculation-model option[value="${e.target.textContent}"]`).prop("selected", true);
+					})
+				}
+			});
+		}
+	};
 
+	const createModelSelect = () => {
+
+		for (const item of selectsArray) {
+			const modelSelect = $(`#${item}-calculation-model`);
+			modelSelect.prop("disabled", true);
+			
+			$(`body`).on(`change`, `#${item}-calculation-brand`, () => {
+				modelSelect.empty();
+				modelSelect.prop("disabled", false);
+				$(`#${item}-calculation-model` ).append(`<option value="" disabled selected>Марка вашего авто</option>`);
 				
-  
-        modelArray.forEach((item,i) => {
-          $( `#${select}-calculation-model` ).append(`<option value=${item}>${item}</option>`);
-          
-          $(`#heapbox_${select}-calculation-model .heapOptions`).append(
-            `<li class="heapOption">
-              <a href="" rel="${i}" title="${item}" class="">${item}</a>
-            </li>`
-          );
-        })
 
-				$('body').on('click', `#heapbox_${select}-calculation-model .heapOption`, (e) => {
-					e.preventDefault();
+				const modelArray = Object.values(dataSet[$(`#${item}-calculation-brand`).val()])[0];
 
-					$(`#heapbox_${select}-calculation-model .holder`).text(e.target.textContent);
-					$(`#${select}-calculation-model option[value="${e.target.textContent}"]`).prop("selected", true);
+				modelArray.forEach((elem,i) => {
+					$(`#${item}-calculation-model` ).append(`<option value=${elem}>${elem}</option>`);
 				})
+			})
+		}
+	}
+
+
+	const main = () => {
+		if (window.matchMedia("(min-width: 600px)").matches) {
+
+			onHeapbox(selectsArray);
+			createSelect(selectsArray);
+		} else {
+			createModelSelect()
+		}
+	};
+
+	main();
+
+	const validationForms = (arr) => {
+		
+	
+		$(`body`).on(`submit`, `.calculation--first`, (e) => {
+
+			if ($(`#first-calculation-brand`).val() === null) {
+				e.preventDefault();
+
+				$(`#first-calculation-brand`).parent().addClass(`calculation__select-wrap--error`);
+			} 
+
+			if ($(`#first-calculation-model`).val() === null) {
+				e.preventDefault();
+
+				$(`#first-calculation-model`).parent().addClass(`calculation__select-wrap--error`);
+			}
+
+			if ($(`#calculation-phone--first`).val() === ``) {
+				e.preventDefault();
+
+				$(`#calculation-phone--first`).parent().addClass(`calculation__select-wrap--error`);
+			}
+		})
+
+		$(`body`).on(`submit`, `.calculation--order`, (e) => {
+			
+
+			if ($(`#order-calculation-brand`).val() === null) {
+				e.preventDefault();
+
+				$(`#order-calculation-brand`).parent().addClass(`calculation__select-wrap--error`);
+			} 
+
+			if ($(`#order-calculation-model`).val() === null) {
+				e.preventDefault();
+
+				$(`#order-calculation-model`).parent().addClass(`calculation__select-wrap--error`);
+			}
+			
+			console.log($(`#calculation-phone--order`).val())
+
+			if ($(`#calculation-phone--order`).val() === ``) {
+				console.log(`111111111111111111`)
+				e.preventDefault();
+
+				$(`#calculation-phone--order`).parent().addClass(`calculation__select-wrap--error`);
+
 				
-        
-      }
-  
-    });
-  }
+			}
+		})
 
-  // $("#first-calculation-brand").heapbox({
-  //   "heapsize":"300px",
-  //   'onChange':function(value) {
-  //     const modelArray = Object.values(dataSet[value])[0]
+		$(`body`).on(`submit`, `.calculation--example`, (e) => {
+			if ($(`#example-calculation-brand`).val() === null) {
+				e.preventDefault();
 
-  //     $(`#heapbox_first-calculation-model .heapOptions`).empty();
-  //     $(`#first-calculation-model`).empty();
+				$(`#example-calculation-brand`).parent().addClass(`calculation__select-wrap--error`);
+			} 
 
-  //     modelArray.forEach((item,i) => {
-  //       $( "#first-calculation-model" ).append( `<option value>${item}</option>` );
-        
-  //       $(`#heapbox_first-calculation-model .heapOptions`).append(
-  //         `<li class="heapOption">
-  //           <a href="" rel="${i}" title="${item}" class="">${item}</a>
-  //         </li>`
-  //       );
+			if ($(`#example-calculation-model`).val() === null) {
+				e.preventDefault();
 
-  //     })
-  //   }
+				$(`#example-calculation-model`).parent().addClass(`calculation__select-wrap--error`);
+			}
+			
+			console.log($(`#calculation-phone--example`).val())
 
-  // });
+			if ($(`#calculation-phone--example`).val() === ``) {
+				e.preventDefault();
+				$(`#calculation-phone--example`).parent().addClass(`calculation__select-wrap--error`);
+			}
+		})
+
+		$(`body`).on(`submit`, `.calculation--modal`, (e) => {
+			if ($(`#modal-calculation-brand`).val() === null) {
+				e.preventDefault();
+
+				$(`#modal-calculation-brand`).parent().addClass(`calculation__select-wrap--error`);
+			} 
+
+			if ($(`#modal-calculation-model`).val() === null) {
+				e.preventDefault();
+
+				$(`#modal-calculation-model`).parent().addClass(`calculation__select-wrap--error`);
+			}
+			
+			console.log($(`#calculation-phone--modal`).val())
+
+			if ($(`#calculation-phone--modal`).val() === ``) {
+				e.preventDefault();
+				$(`#calculation-phone--modal`).parent().addClass(`calculation__select-wrap--error`);
+			}
+		})
+
+		$(`body`).on(`click`, `#calculation-phone--first`, () => {
+			$(`#calculation-phone--first`).parent().removeClass(`calculation__select-wrap--error`);
+		})
+		
+		$(`body`).on(`click`, `#calculation-phone--order`, () => {
+			$(`#calculation-phone--order`).parent().removeClass(`calculation__select-wrap--error`);
+		})
+		
+		$(`body`).on(`click`, `#calculation-phone--example`, () => {
+			$(`#calculation-phone--example`).parent().removeClass(`calculation__select-wrap--error`);
+		})
+		
+		$(`body`).on(`click`, `#calculation-phone--modal`, () => {
+			$(`#calculation-phone--modal`).parent().removeClass(`calculation__select-wrap--error`);
+		})
+		
+	};
+
+	// $(`body`).on(`click`, `#heapbox_first-calculation-brand .holder`, () => {
+	// 	console.log(`fhffhfhh`)
+	// })
+
+	
+	
+
+	
+	validationForms(selectsArray);
+
+	
   
   
   

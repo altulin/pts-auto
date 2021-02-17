@@ -53,7 +53,7 @@
 
     +mw(600)
       padding-top: 40px
-      margin-bottom: 178px
+      margin-bottom: 225px
 
 
   &__bg
@@ -68,6 +68,9 @@
       top: 60px
       height: auto
       min-width: auto
+
+    +mw(600)
+      top: 6px
 
 
   &__calculation-wrapper
@@ -254,48 +257,6 @@
   &__politic
     color: #7C859D
 
-.calculation
-
-  &__field
-
-
-  &__field--head
-
-
-  &__title
-
-
-  &__subtitle
-
-
-  &__control
-
-
-  &__label
-
-
-  &__select
-
-
-  &__head
-
-
-  &__input
-
-
-  &__btn
-
-
-  &__consent
-
-
-  &__politic
-
-
-.size-3
-
-.btn
-
 .btn
   display: block
   background-color: #8CBD00
@@ -327,7 +288,6 @@
   position: relative
 
   &.open
-    // z-index: 1
 
 
   & .holder
@@ -344,6 +304,11 @@
     font-weight: 500
     z-index: 10
     -webkit-tap-highlight-color: transparent
+
+  & .holder:not([rel="0"])
+    color: $text
+  
+  
 
     &:hover
       background-color: #FAFAFB
@@ -375,7 +340,7 @@
     border: 1px solid #e6e6ea
     border-radius: 4px
 
-    & .sliderDown 
+    
 
 
 
@@ -386,6 +351,7 @@
   border-radius: 4px
 
   & .heapOption
+    // list-style: none
 
     & a
       font-size: rem(18)
@@ -403,7 +369,17 @@
   & .heapOption:first-child
     display: none
 
-.hover-opacity
+.title
+  font-size: rem(44)
+  line-height: rem(48)
+  margin-top: 0
+  font-weight: 600
+  color: #46404C
+
+  +mw(600)
+    font-size: rem(22)
+    line-height: rem(26)
+
 
 .heapOptions
 
@@ -424,3 +400,100 @@
 
   & .heapOption:first-child
     display: none
+
+.calculation
+
+  &__empty
+    color: #F73D34
+    font-size: rem(10)
+    line-height: 1.2
+    margin-top: 5px
+    display: none
+
+  &__select-wrap--error
+
+    & .holder
+      border: 1px solid #F1484A
+      color: #F1484A
+
+    & .handler
+      background-image: url("../img/dest/select-arrow-red.svg")
+
+    & .calculation__empty
+      display: block
+
+    & .calculation__input
+      border: 1px solid #F1484A
+
+      &::placeholder
+        color: #F1484A
+
+    +mw(600)
+
+      & .calculation__select
+        border: 1px solid #F1484A
+        color: #F1484A
+
+
+  +mw(600)
+
+
+    &__select
+      appearance: none
+      background-color: transparent
+      border: none
+      padding-left: 20px
+      padding-right: 20px
+      padding-top: 24px
+      padding-bottom: 23px
+      margin: 0
+      width: 100%
+      font-size: rem(16)
+      line-height: 1.2
+      color: #8D8D93
+      font-weight: 500
+      outline: none
+      background-color: #F0F0F4
+      border: 1px solid #E6E6EA
+      border-radius: 4px
+
+      &-wrap
+        position: relative
+
+        &::after
+          content: ""
+          position: absolute
+          width: 6px
+          height: 12px
+          right: 20px
+          top: 30px
+          background-image: url(../img/dest/select-arrow.svg)
+          background-repeat: no-repeat
+          background-size: contain
+
+       
+
+           
+          
+
+      &:focus
+        background-color: #fff
+
+        & + .focus 
+          position: absolute
+          top: 0px
+          left: 0px
+          right: 0px
+          bottom: 0px
+          border: 1px solid #8CBD00
+          border-radius: inherit
+          border-radius: 4px
+
+      
+
+
+    &__head
+
+
+
+

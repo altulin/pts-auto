@@ -4,29 +4,6 @@
 
 $(function() {
 
-  // selects promo form
-  // $("#calculation-brand").heapbox({"heapsize":"300px"});
-  $("#first-calculation-model").heapbox();
-  $("#first-calculation-year").heapbox();
-  $(`#heapbox_first-calculation-model .holder`).css("pointer-events", "none")
-
-  // $("#order-calculation-brand").heapbox();
-  $("#order-calculation-model").heapbox();
-  $("#order-calculation-year").heapbox();
-  $(`#heapbox_order-calculation-model .holder`).css("pointer-events", "none")
-
-  // $("#example-calculation-brand").heapbox();
-  $("#example-calculation-model").heapbox();
-  $("#example-calculation-year").heapbox();
-  $(`#heapbox_example-calculation-model .holder`).css("pointer-events", "none")
-
-  // $("#modal-calculation-brand").heapbox();
-  $("#modal-calculation-model").heapbox();
-  $("#modal-calculation-year").heapbox();
-  $(`#heapbox_modal-calculation-model .holder`).css("pointer-events", "none")
-
-
-
   //header-menu
   const menu = new MmenuLight(
     document.querySelector( "#header-menu" ),
@@ -90,8 +67,7 @@ $(function() {
   }
 
   $('#faq').responsiveTabs({
-    startCollapsed: 'accordion',
-    animation: 'slide'
+    startCollapsed: 'accordion'
   });
 });
 
@@ -110,7 +86,7 @@ DG.then(function () {
                 iconSize: [48, 60]
             });
     DG.marker([52.2677, 104.33916], {
-      draggable: true,
+      // draggable: true,
       icon: myIcon
     }).addTo(map);
 
@@ -126,5 +102,15 @@ DG.then(function () {
       e.preventDefault();
       $('.card').removeClass(`card--hide`);
       $('.review__link').hide()
+    })
+
+    // срабатывания цели на открытие thank-modal
+    $('#thank-modal').on($.modal.OPEN, function(event, modal) {
+      ym(67969729,'reachGoal','thank-modal');
+    });
+
+    // валидация форм
+    $(`body`).on(`click`, `.calculation`, () => {
+      
     })
 });

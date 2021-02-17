@@ -7,6 +7,7 @@
   padding-bottom: 50px
   padding-left: 50px
   box-shadow: none
+  margin-bottom: 0
 
   +mw(1000)
     padding-left: 30px
@@ -55,6 +56,12 @@
 
 .blocker
   background-color: #fff
+  display: flex
+  align-items: center
+  justify-content: center
+
+  +mw(600)
+    display: block
 
 
 .thank
@@ -80,3 +87,61 @@
   &__text
     font-size: rem(20)
     line-height: 1.2
+
+
+
+.politic-modal
+
+  &__inner
+    max-width: 993px
+
+    +mw(600)
+      padding-left: 20px
+      padding-right: 20px
+
+  &__logo-link
+    margin-bottom: 70px
+    width: 80px
+    height: 19px
+    display: block
+
+
+  &__logo-img
+    width: 80px
+    height: 19px
+
+
+  &__title
+    font-size: rem(24)
+    line-height: 1.2
+    font-weight: 600
+    margin-bottom: 20px
+    text-transform: uppercase
+
+
+  &__title--main
+    margin-bottom: 0
+
+
+  &__head
+    font-size: rem(24)
+    line-height: 1.2
+    font-weight: 600
+    margin-bottom: 20px
+
+
+  &__text
+    font-size: rem(18)
+    line-height: 1.33
+
+
+  &__list
+    margin-top: 60px
+
+
+  &__item
+
+    & + li
+      margin-top: 60px
+
+

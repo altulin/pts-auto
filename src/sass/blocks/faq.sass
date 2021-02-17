@@ -37,6 +37,7 @@
 
   &__title
     margin-bottom: 34px
+    font-size: rem(36)
     
     &--mobile
       display: none
@@ -138,6 +139,30 @@
   & .r-tabs .r-tabs-accordion-title
     display: block
 
+    & + .r-tabs-accordion-title
+    // margin-bottom: 10px
+    margin-top: 20px
+
+  & .r-tabs-accordion-title.r-tabs-state-active
+    margin-bottom: 0
+
+    &  + .faq__answer
+      background-color: #fff
+      margin-bottom: 10px
+      border: 1px solid #e6e6ea
+      border-radius: 0 0 5px 5px
+      padding-left: 30px
+
+    & a
+      
+
+
+
   & .r-tabs-accordion-title .r-tabs-anchor
     padding-right: 70px
+    margin-bottom: 0
+    font-size: rem(18)
+    padding-left: 30px
+
+    
 

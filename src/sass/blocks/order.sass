@@ -1,5 +1,5 @@
 .order
-  margin-bottom: 100px
+  margin-bottom: 140px
 
   +mw(600)
     margin-bottom: 80px
@@ -8,12 +8,16 @@
     display: flex
     justify-content: space-between
 
+    +mw(1000)
+      // flex-direction: column
+
 
   &__col--left
     width: 60%
 
     +mw(1000)
       width: 100%
+      margin-bottom: 20px
 
 
   &__title
@@ -98,6 +102,8 @@
 
     +mw(1000)
       display: none
+      // align-self: center
+      // padding: 40px 20px
 
   
 
@@ -121,6 +127,9 @@
     width: 100%
     bottom: 0
     left: 0
+
+    +mw(600)
+      // display: none
 
   &__img
     display: block

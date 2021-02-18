@@ -137,7 +137,7 @@ $(function(){
 	
 					$(`#${form_name}-calculation-brand`).parent().addClass(`calculation__select-wrap--error`);
 				} 
-	
+				console.log($(`#${form_name}-calculation-model`).val())
 				if ($(`#${form_name}-calculation-model`).val() === null) {
 					e.preventDefault();
 	
@@ -149,6 +149,18 @@ $(function(){
 	
 					$(`#calculation-phone--${form_name}`).parent().addClass(`calculation__select-wrap--error`);
 				}
+
+				// для отладки модального окна потом нужно убрать
+				// ---------------------------------------------------------
+				if ($(`#${form_name}-calculation-brand`).val() !== null &&
+						$(`#${form_name}-calculation-model`).val() !== null &&
+						$(`#calculation-phone--${form_name}`).val() !== ``) {
+
+					e.preventDefault();		
+					$(`.thank`).modal()
+				}
+				// --------------------------------------------------
+				
 			});
 
 			$(`body`).on(`click`, `#calculation-phone--${form_name}`, () => {

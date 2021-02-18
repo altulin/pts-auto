@@ -102,7 +102,7 @@ DG.then(function () {
 
     
     // Взять все элементы <input> у которых атрибут class="phone field"
-    $('.input-phone').mask("+7 (999) 999-9999")
+    $('.input-phone').mask("+7 (999) 999-99-99")
 
 
     //подгрузить отзывы
@@ -116,4 +116,6 @@ DG.then(function () {
     $('#thank-modal').on($.modal.OPEN, function(event, modal) {
       ym(67969729,'reachGoal','thank-modal');
     });
+
+    
 });

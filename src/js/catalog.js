@@ -79,7 +79,7 @@ $(function(){
 					$(`#heapbox_${select}-calculation-model .heapOptions`).empty();
 					$(`#${select}-calculation-model`).empty();
 					$(`#heapbox_${select}-calculation-model .holder`).css("pointer-events", "auto")
-					$(`#heapbox_${select}-calculation-model .holder`).prop("rel", "10")
+					// $(`#heapbox_${select}-calculation-model .holder`).prop("rel", "10")
 
 					
 		
@@ -97,6 +97,7 @@ $(function(){
 						e.preventDefault();
 
 						$(`#heapbox_${select}-calculation-model .holder`).text(e.target.textContent);
+						$(`#heapbox_${select}-calculation-model .holder`).prop("rel", "1")
 						$(`#${select}-calculation-model option[value="${e.target.textContent}"]`).prop("selected", true);
 					})
 				}
@@ -125,143 +126,66 @@ $(function(){
 		}
 	}
 
+	const validationForms = (arr) => {
+		
+		for (const form_name of arr) {
 
-	const main = () => {
-		if (window.matchMedia("(min-width: 600px)").matches) {
+			$(`body`).on(`submit`, `.calculation--${form_name}`, (e) => {
 
-			onHeapbox(selectsArray);
-			createSelect(selectsArray);
-		} else {
-			createModelSelect()
+				if ($(`#${form_name}-calculation-brand`).val() === null) {
+					e.preventDefault();
+	
+					$(`#${form_name}-calculation-brand`).parent().addClass(`calculation__select-wrap--error`);
+				} 
+	
+				if ($(`#${form_name}-calculation-model`).val() === null) {
+					e.preventDefault();
+	
+					$(`#${form_name}-calculation-model`).parent().addClass(`calculation__select-wrap--error`);
+				}
+	
+				if ($(`#calculation-phone--${form_name}`).val() === ``) {
+					e.preventDefault();
+	
+					$(`#calculation-phone--${form_name}`).parent().addClass(`calculation__select-wrap--error`);
+				}
+			});
+
+			$(`body`).on(`click`, `#calculation-phone--${form_name}`, () => {
+				$(`#calculation-phone--${form_name}`).parent().removeClass(`calculation__select-wrap--error`);
+			})
 		}
 	};
 
-	main();
 
-	const validationForms = (arr) => {
-		
-	
-		$(`body`).on(`submit`, `.calculation--first`, (e) => {
-
-			if ($(`#first-calculation-brand`).val() === null) {
-				e.preventDefault();
-
-				$(`#first-calculation-brand`).parent().addClass(`calculation__select-wrap--error`);
-			} 
-
-			if ($(`#first-calculation-model`).val() === null) {
-				e.preventDefault();
-
-				$(`#first-calculation-model`).parent().addClass(`calculation__select-wrap--error`);
-			}
-
-			if ($(`#calculation-phone--first`).val() === ``) {
-				e.preventDefault();
-
-				$(`#calculation-phone--first`).parent().addClass(`calculation__select-wrap--error`);
-			}
-		})
-
-		$(`body`).on(`submit`, `.calculation--order`, (e) => {
-			
-
-			if ($(`#order-calculation-brand`).val() === null) {
-				e.preventDefault();
-
-				$(`#order-calculation-brand`).parent().addClass(`calculation__select-wrap--error`);
-			} 
-
-			if ($(`#order-calculation-model`).val() === null) {
-				e.preventDefault();
-
-				$(`#order-calculation-model`).parent().addClass(`calculation__select-wrap--error`);
-			}
-			
-			console.log($(`#calculation-phone--order`).val())
-
-			if ($(`#calculation-phone--order`).val() === ``) {
-				console.log(`111111111111111111`)
-				e.preventDefault();
-
-				$(`#calculation-phone--order`).parent().addClass(`calculation__select-wrap--error`);
-
-				
-			}
-		})
-
-		$(`body`).on(`submit`, `.calculation--example`, (e) => {
-			if ($(`#example-calculation-brand`).val() === null) {
-				e.preventDefault();
-
-				$(`#example-calculation-brand`).parent().addClass(`calculation__select-wrap--error`);
-			} 
-
-			if ($(`#example-calculation-model`).val() === null) {
-				e.preventDefault();
-
-				$(`#example-calculation-model`).parent().addClass(`calculation__select-wrap--error`);
-			}
-			
-			console.log($(`#calculation-phone--example`).val())
-
-			if ($(`#calculation-phone--example`).val() === ``) {
-				e.preventDefault();
-				$(`#calculation-phone--example`).parent().addClass(`calculation__select-wrap--error`);
-			}
-		})
-
-		$(`body`).on(`submit`, `.calculation--modal`, (e) => {
-			if ($(`#modal-calculation-brand`).val() === null) {
-				e.preventDefault();
-
-				$(`#modal-calculation-brand`).parent().addClass(`calculation__select-wrap--error`);
-			} 
-
-			if ($(`#modal-calculation-model`).val() === null) {
-				e.preventDefault();
-
-				$(`#modal-calculation-model`).parent().addClass(`calculation__select-wrap--error`);
-			}
-			
-			console.log($(`#calculation-phone--modal`).val())
-
-			if ($(`#calculation-phone--modal`).val() === ``) {
-				e.preventDefault();
-				$(`#calculation-phone--modal`).parent().addClass(`calculation__select-wrap--error`);
-			}
-		})
-
-		$(`body`).on(`click`, `#calculation-phone--first`, () => {
-			$(`#calculation-phone--first`).parent().removeClass(`calculation__select-wrap--error`);
-		})
-		
-		$(`body`).on(`click`, `#calculation-phone--order`, () => {
-			$(`#calculation-phone--order`).parent().removeClass(`calculation__select-wrap--error`);
-		})
-		
-		$(`body`).on(`click`, `#calculation-phone--example`, () => {
-			$(`#calculation-phone--example`).parent().removeClass(`calculation__select-wrap--error`);
-		})
-		
-		$(`body`).on(`click`, `#calculation-phone--modal`, () => {
-			$(`#calculation-phone--modal`).parent().removeClass(`calculation__select-wrap--error`);
-		})
-		
+	// Меняем текст во всех input-phone input-name calculation__select после изменения
+	const changeStyleText = () => {
+		$('.input-phone, .input-name, .calculation__select').each(function () {
+			$(this).on(`change`, () => {
+				if ($(this).val().length !== 0) {
+					
+					$(this).css("color", "#46404C");
+					$(this).css("font-weight", "500");
+				}
+			});
+		});
 	};
 
-	// $(`body`).on(`click`, `#heapbox_first-calculation-brand .holder`, () => {
-	// 	console.log(`fhffhfhh`)
-	// })
 
-	
-	
+	const main = () => {
 
-	
-	validationForms(selectsArray);
+		if (window.matchMedia("(min-width: 600px)").matches) {
+			onHeapbox(selectsArray);
+			createSelect(selectsArray);
 
-	
-  
-  
-  
-  
+		} else {
+			createModelSelect()
+			// changeColorOnSelect()
+		}
+
+		validationForms(selectsArray);
+		changeStyleText();
+	};
+
+	main();
 });

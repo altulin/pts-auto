@@ -23,12 +23,22 @@ $(function() {
 
   })
 
+  $(`.header-nav__link`).each(function() {
+    $(this).on(`click`, () => {
+      drawer.close();
+      $(`.page-header__menu--close`).addClass(`hide`);
+      $(`.page-header__menu--open`).removeClass(`hide`);
+    })
+  })
+
   $('body').on('click', '.page-header__menu--close', (e) => {
     $(`.page-header__menu--close`).addClass(`hide`);
     $(`.page-header__menu--open`).removeClass(`hide`);
     e.preventDefault();
     drawer.close();
   })
+
+
 
 
   // tabs
@@ -90,8 +100,6 @@ DG.then(function () {
       icon: myIcon
     }).addTo(map);
 
-
-    
     
     // Взять все элементы <input> у которых атрибут class="phone field"
     $('.input-phone').mask("+7 (999) 999-9999")
@@ -108,9 +116,4 @@ DG.then(function () {
     $('#thank-modal').on($.modal.OPEN, function(event, modal) {
       ym(67969729,'reachGoal','thank-modal');
     });
-
-    // валидация форм
-    $(`body`).on(`click`, `.calculation`, () => {
-      
-    })
 });

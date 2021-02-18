@@ -246,6 +246,12 @@
     color: #8D8D93
     font-weight: 500
 
+    &:hover
+      background-color: #FAFAFB
+
+    +mw(600)
+      font-size: rem(16)
+
   &__consent
     font-size: rem(12)
     line-height: rem(16)
@@ -305,13 +311,15 @@
     z-index: 10
     -webkit-tap-highlight-color: transparent
 
+    &:hover
+      background-color: #FAFAFB
+
   & .holder:not([rel="0"])
     color: $text
   
   
 
-    &:hover
-      background-color: #FAFAFB
+    
 
   & .handler
     width: 6px
@@ -332,7 +340,7 @@
     top: 70px
     // overflow: hidden
     overflow-y: auto
-    max-height: 300px
+    max-height: 280px
     z-index: 1
     margin-top: 10px
     padding-left: 0
